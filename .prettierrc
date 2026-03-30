@@ -1,11 +1,26 @@
 {
   "printWidth": 100,
+  "tabWidth": 2,
+  "useTabs": false,
   "singleQuote": true,
+  "semi": true,
+  "bracketSpacing": true,
+  "arrowParens": "always",
+  "endOfLine": "lf",
+
+  "htmlWhitespaceSensitivity": "ignore",
+
   "overrides": [
     {
       "files": "*.html",
       "options": {
         "parser": "angular"
+      }
+    },
+    {
+      "files": "*.scss",
+      "options": {
+        "singleQuote": false
       }
     }
   ]
