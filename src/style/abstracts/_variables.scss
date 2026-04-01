@@ -1,0 +1,35 @@
+// =======================
+// COLOR SYSTEM
+// =======================
+
+// Option 1
+$opt1-base: #d9d9d9;
+$opt1-dark: #0b0f14;
+
+$opt1-h1: #f4c21f;
+$opt1-h2: #3f5cff;
+$opt1-h3: #f47a55;
+
+// Option 2
+$opt2-base: #d9d9d9;
+$opt2-dark: #0b0f14;
+
+$opt2-h1: #b7e60d;
+$opt2-h2: #7a4bd9;
+$opt2-h3: #f59e0b;
+
+// Option 3
+$opt3-base: #d9d9d9;
+$opt3-dark: #0b1220;
+
+$opt3-h1: #2ecc71;
+$opt3-h2: #2aa9b0;
+$opt3-h3: #1f6ed4;
+
+//in Use Color
+$main-base: $opt1-base;
+$main-dark: $opt1-dark;
+
+$main-hl1: $opt1-h1;
+$main-hl2: $opt1-h2;
+$main-hl3: $opt1-h3;
