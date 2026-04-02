@@ -1,0 +1,211 @@
+@use "../../../style/abstracts/" as *;
+
+.header {
+  @include flex($justify-content: space-between, $align-items: center);
+  width: 100%;
+  padding: 16px;
+}
+
+nav {
+  flex-grow: 1;
+  & > ul {
+    @include flex($justify-content: space-around, $align-items: center);
+    & > li:hover {
+      cursor: pointer;
+    }
+  }
+  .nav-item-wrapper {
+    @include flex($flex-direction: column, $justify-content: center, $align-items: center);
+    transform: translateY(30%);
+    flex-grow: 1;
+  }
+}
+
+.menu-burger {
+  @include flex($justify-content: center, $align-items: center);
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.overlay-nav {
+  position: fixed;
+  inset: 0;
+
+  transform: translateY(-100%);
+  opacity: 0;
+
+  transition:
+    transform 0.5s ease-in,
+    opacity 0.4s ease-in;
+
+  pointer-events: none;
+
+  &--active {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+.nav-mobile {
+  background-image: url("/images/01_Background/Design-Size-Relation/01_Hero.png");
+  background-position: bottom;
+  background-size: cover;
+  position: absolute;
+  width: 100%;
+  height: 80%;
+  @include flex($flex-direction: column, $justify-content: space-between);
+
+  &__top {
+    @include flex($align-items: center, $justify-content: space-between);
+    padding: 16px;
+  }
+  &__middle {
+    @include flex($flex-direction: column);
+    & > nav > ul {
+      @include flex($flex-direction: column, $justify-content: center, $align-items: center);
+      gap: 24px;
+      text-align: center;
+    }
+  }
+  &__bottom {
+    @include flex($justify-content: center);
+    margin-bottom: 100px;
+
+    & > a {
+      height: 40px;
+      width: 40px;
+    }
+    & > a:hover {
+      cursor: pointer;
+    }
+  }
+}
+.social-media {
+  @include flex();
+  gap: 24px;
+}
+.media-icon {
+  border: 1px solid $main-base;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  @include flex($justify-content: center, $align-items: center);
+
+  &:hover {
+    background-color: $main-hl2;
+  }
+}
+
+.lang-switch {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 600;
+
+  &__label {
+    color: #aaa;
+    transition: color 0.2s;
+    &:hover {
+      cursor: pointer;
+    }
+
+    &--active {
+      color: $main-hl3;
+    }
+  }
+
+  &__toggle {
+    width: 32px;
+    height: 8px;
+    background: $main-hl3;
+    border-radius: 999px;
+    position: relative;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+
+    transition: background 0.3s ease;
+  }
+
+  &__slider {
+    position: absolute;
+    border: 1px solid $main-base;
+    top: 50%;
+    left: 2px;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    background: $main-hl2;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+  }
+
+  // Slider ACTIVE STATE
+  &--active {
+    .lang-switch__slider {
+      transform: translate(16px, -50%);
+    }
+
+    .lang-switch__label {
+      &:first-child {
+        color: $main-base;
+      }
+
+      &:last-child {
+        color: $main-hl3;
+      }
+    }
+  }
+}
+
+//Brand Logo SVG
+.brand-logo {
+  max-width: fit-content;
+  max-height: fit-content;
+
+  &:hover {
+    cursor: pointer;
+  }
+  & > svg .accent {
+    fill: $main-hl2;
+  }
+  & > svg:hover .accent {
+    fill: $main-hl1;
+    transition: fill 0.3s ease;
+  }
+}
+
+.hover-img {
+  height: 45px;
+  transform: translateY(-76%);
+  clip-path: inset(0 0 100% 0);
+}
+
+.nav-item:first-child:hover .hover-img {
+  animation: revealFromTop 0.4s linear forwards;
+}
+
+.nav-item:hover .hover-img {
+  animation: revealFromLeft 0.4s linear forwards;
+}
+
+@keyframes revealFromTop {
+  from {
+    clip-path: inset(0 0 100% 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes revealFromLeft {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}

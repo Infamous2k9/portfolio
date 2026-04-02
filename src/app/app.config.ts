@@ -12,7 +12,7 @@ export const appConfig: ApplicationConfig = {
     provideRouter(routes),
     provideHttpClient(),
     provideTranslateService({
-      lang: 'de',
+      lang: localStorage.getItem('language') || 'de',
       fallbackLang: 'en',
       loader: provideTranslateHttpLoader({
         prefix: '/i18n/',
