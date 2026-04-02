@@ -1,6 +1,7 @@
 import { TitleCasePipe } from '@angular/common';
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-header',
@@ -9,7 +10,7 @@ import { RouterLink } from '@angular/router';
   styleUrl: './header.scss',
 })
 export class Header {
-  language = 'en'; //später mit local browser lang wechseln
+  language = 'en';
   innerWidth = 0;
   toggleNav = false;
 
@@ -26,19 +27,18 @@ export class Header {
   linksDE = ['über mich', 'skills', 'projekte', 'kontakt'];
 
   ngOnInit() {
+    this.language = navigator.language.split('-')[0];
     this.innerWidth = window.innerWidth;
-    if (!localStorage.getItem('language')) {
-      this.language = localStorage.getItem('language') || 'en';
-    }
   }
 
   switchLang = () => {
     if (this.language === 'en') {
       this.language = 'de';
+      this.useLanguage(this.language);
     } else {
       this.language = 'en';
+      this.useLanguage(this.language);
     }
-    localStorage.setItem('language', this.language);
   };
 
   changeToggle = () => {
@@ -59,5 +59,10 @@ export class Header {
   @HostListener('window:resize')
   onResize() {
     this.innerWidth = window.innerWidth;
+  }
+
+  private translate = inject(TranslateService);
+  useLanguage(language: string): void {
+    this.translate.use(language);
   }
 }
