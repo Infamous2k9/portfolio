@@ -1,3 +1,4 @@
+@use "./variables" as *;
 @mixin flex(
   $flex-direction: row,
   $flex-wrap: wrap,
@@ -9,4 +10,12 @@
   flex-wrap: $flex-wrap;
   justify-content: $justify-content;
   align-items: $align-items;
+}
+
+@mixin respond($size) {
+  @if map-has-key($breakpoints, $size) {
+    @media (min-width: map-get($breakpoints, $size)) {
+      @content;
+    }
+  }
 }

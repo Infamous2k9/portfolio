@@ -33,3 +33,13 @@ $main-dark: $opt1-dark;
 $main-hl1: $opt1-h1;
 $main-hl2: $opt1-h2;
 $main-hl3: $opt1-h3;
+
+$breakpoints: (
+  sm: 375px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1440px,
+);
+
+$padding-72: 72px;
+$padding-16: 16px;

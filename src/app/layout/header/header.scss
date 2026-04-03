@@ -3,7 +3,9 @@
 .header {
   @include flex($justify-content: space-between, $align-items: center);
   width: 100%;
-  padding: 16px;
+  height: 80px;
+  padding-top: $padding-16;
+  padding-bottom: $padding-16;
 }
 
 nav {
@@ -31,6 +33,7 @@ nav {
 
 .overlay-nav {
   position: fixed;
+  z-index: 1;
   inset: 0;
 
   transform: translateY(-100%);
@@ -73,7 +76,6 @@ nav {
   &__bottom {
     @include flex($justify-content: center);
     margin-bottom: 100px;
-
     & > a {
       height: 40px;
       width: 40px;

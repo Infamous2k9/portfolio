@@ -1,3 +1,32 @@
+@use "../abstracts/" as *;
+// =======================
+// KALAM FONT
+// =======================
+
+@font-face {
+  font-family: "Kalam";
+  src: url("/assets/fonts/Kalam/Kalam-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Kalam";
+  src: url("/assets/fonts/Kalam/Kalam-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Kalam";
+  src: url("/assets/fonts/Kalam/Kalam-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 // =======================
 // BRICOLAGE GROTESQUE
 // =======================
@@ -63,4 +92,41 @@
   font-weight: 800;
   font-style: normal;
   font-display: swap;
+}
+
+.btn-pill {
+  font-family: "Bricolage Grotesque", Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 18px;
+  line-height: 120%;
+  letter-spacing: 0%;
+  text-align: justify;
+}
+.name-tag {
+  font-family: "Kalam", Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 24px;
+  line-height: 120%;
+  letter-spacing: 0%;
+}
+
+h1 {
+  font-family: "Bricolage Grotesque", Arial, Helvetica, sans-serif;
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 100%;
+  font-style: Bold;
+  letter-spacing: 0;
+
+  @include respond(md) {
+    font-size: 69px;
+  }
+  @include respond(lg) {
+    font-size: 96px;
+  }
+  @include respond(xl) {
+    font-size: 124px;
+  }
 }

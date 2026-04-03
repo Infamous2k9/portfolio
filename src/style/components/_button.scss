@@ -1,0 +1,14 @@
+@use "../abstracts" as *;
+
+.btn-pill {
+  border: 1px solid $opt2-base;
+  border-radius: 30px;
+  width: fit-content;
+  padding: 9px 24px;
+  transition:
+    width 420ms ease,
+    background-color 420ms ease;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
