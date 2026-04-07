@@ -2,11 +2,6 @@
 
 @use "./style/abstracts/" as *;
 
-body {
-  font-family: "Bricolage Grotesque", sans-serif;
-  color: $opt2-base;
-}
-
 .d-none {
   display: none;
 }

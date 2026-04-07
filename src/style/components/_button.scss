@@ -4,7 +4,6 @@
   @include flex($justify-content: flex-start, $align-items: center);
   display: inline-flex;
   position: relative;
-  font-size: clamp(14px, 1.1vw, 18px);
   border: 1px solid $main-base;
   border-radius: 30px;
   box-sizing: border-box;
