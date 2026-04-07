@@ -53,7 +53,7 @@ export class Header {
   };
 
   isMobile = () => {
-    return this.innerWidth < 629;
+    return this.innerWidth < 768;
   };
 
   @HostListener('window:resize')

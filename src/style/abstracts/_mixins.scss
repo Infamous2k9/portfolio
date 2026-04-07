@@ -1,3 +1,4 @@
+@use "sass:map";
 @use "./variables" as *;
 @mixin flex(
   $flex-direction: row,
@@ -13,8 +14,8 @@
 }
 
 @mixin respond($size) {
-  @if map-has-key($breakpoints, $size) {
-    @media (min-width: map-get($breakpoints, $size)) {
+  @if map.has-key($breakpoints, $size) {
+    @media (min-width: map.get($breakpoints, $size)) {
       @content;
     }
   }

@@ -112,13 +112,21 @@
   letter-spacing: 0%;
 }
 
+p {
+  font-family: Bricolage Grotesque;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 18px;
+  line-height: 120%;
+  letter-spacing: 0%;
+  text-align: justify;
+}
+
 h1 {
   font-family: "Bricolage Grotesque", Arial, Helvetica, sans-serif;
   font-size: 50px;
   font-weight: 700;
   line-height: 100%;
-  font-style: Bold;
-  letter-spacing: 0;
 
   @include respond(md) {
     font-size: 69px;

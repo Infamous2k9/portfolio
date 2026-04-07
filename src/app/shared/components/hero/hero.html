@@ -1,7 +1,28 @@
 <section class="hero-section">
   <app-header></app-header>
   <div class="hero-content">
-    <p class="hero-content__welcome btn-pill">Hello World</p>
+    <div class="hero-content__welcome">
+      <img
+        class="hero-content__hand"
+        src="/icons/waving_hand.png"
+        alt="waving-hand"
+        [class.hero-content__hand--animated]="isHoveringWelcome"
+      />
+
+      <button
+        class="hero-content__btn btn-pill"
+        (mouseenter)="isHoveringWelcome = true"
+        (mouseleave)="isHoveringWelcome = false"
+      >
+        <span class="hero-content__btn-text">
+          @if (isHoveringWelcome) {
+            {{ 'hero.welcomeText' | translate }}
+          } @else {
+            Hallo World
+          }
+        </span>
+      </button>
+    </div>
     <h1 class="hero-content__title">
       <div class="hero-title-first">
         @for (item of headlineText.fullstack; track $index) {
@@ -15,20 +36,22 @@
         }
       </div>
     </h1>
-    <button class="hero-content__cta btn-pill">Get in Touch</button>
+    <button class="hero-content__cta btn-pill btn-push">
+      {{ 'hero.btnText' | translate | titlecase }}
+    </button>
     <div
       class="hero-content__profile-img"
-      (mouseenter)="isHovering = true"
-      (mouseleave)="isHovering = false"
+      (mouseenter)="isHoveringImg = true"
+      (mouseleave)="isHoveringImg = false"
     >
       <div class="profile-img-wrapper"></div>
       <img class="polaroid" src="/images/03_Stickers/Polaroid-Frame.png" alt="Profile-Image" />
       <img class="profil" src="/images/andre.webp" alt="Polaroid-Frame" />
-      <p class="name-tag" data-hover="André :D">{{ isHovering ? 'André :D' : 'André :)' }}</p>
+      <p class="name-tag">{{ isHoveringImg ? 'André :D' : 'André :)' }}</p>
     </div>
   </div>
   <div class="social-media" [class.d-none]="innerWidth < 767">
-    <a target="_blank" href="">
+    <a target="_blank" href="https://www.linkedin.com/in/andr%C3%A9-funk-665698401/">
       <div class="media-icon">
         <svg
           width="24"

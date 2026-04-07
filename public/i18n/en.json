@@ -1,5 +1,7 @@
 {
+  "header": {},
   "hero": {
-    "text": "get in touch"
+    "welcomeText": "Hi, I´m André",
+    "btnText": "get in touch"
   }
 }

@@ -1,14 +1,54 @@
 @use "../abstracts" as *;
 
 .btn-pill {
-  border: 1px solid $opt2-base;
+  @include flex($justify-content: flex-start, $align-items: center);
+  display: inline-flex;
+  position: relative;
+  font-size: clamp(14px, 1.1vw, 18px);
+  border: 1px solid $main-base;
   border-radius: 30px;
+  box-sizing: border-box;
+  padding: clamp(6px, 0.6vw, 10px) clamp(20px, 1.6vw, 28px);
   width: fit-content;
-  padding: 9px 24px;
-  transition:
-    width 420ms ease,
-    background-color 420ms ease;
+  max-width: 100%;
+  min-width: max-content;
+  overflow: visible;
+  transition: background-color 420ms ease;
   background: transparent;
   color: inherit;
   cursor: pointer;
+
+  > * {
+    margin: 0;
+    line-height: 1;
+    white-space: nowrap;
+  }
+
+  &--secondary {
+    border: 1px solid $main-dark;
+  }
+}
+
+.btn-push {
+  box-shadow: 3px 6px 1px $main-base;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    background-color 180ms ease;
+
+  &:hover {
+    transform: translate(3px, 6px);
+    box-shadow: 0 0 1px $main-base;
+    background-color: $main-hl3;
+  }
+
+  &--dark {
+    border-color: $main-dark;
+    box-shadow: 3px 6px 1px $main-dark;
+    color: $main-dark;
+
+    &:hover {
+      box-shadow: 0 0 1px $main-dark;
+    }
+  }
 }

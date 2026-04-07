@@ -4,43 +4,87 @@
   @include flex($flex-direction: column, $flex-wrap: nowrap);
 
   background-image: url("/images/01_Background/Design-Size-Relation/01_Hero.png");
-  height: 100vh;
+  height: fit-content;
   background-position: bottom;
   background-size: cover;
 
   padding: 0 $padding-16;
-  @include respond(xl) {
-    padding: 0 $padding-72;
-  }
 
   @include respond(md) {
     @include flex($flex-direction: column, $flex-wrap: nowrap, $justify-content: space-between);
+  }
+  @include respond(lg) {
+    padding: 0 $padding-72;
+    height: 100vh;
+  }
+  @include respond(xl) {
+    padding-left: calc((100% - 1440px + $padding-72) / 2);
+    padding-right: calc((100% - 1440px + $padding-72) / 2);
+  }
+  @include respond(xxl) {
+    padding-bottom: $padding-72;
   }
 }
 
 .hero-content {
   @include flex($flex-direction: column, $align-items: center);
   margin-top: 33px;
+
   @include respond(lg) {
-    margin-left: calc($padding-72 * 2);
-    margin-right: calc($padding-72 * 2);
+    margin-left: $padding-16;
+    margin-right: $padding-16;
   }
   @include respond(xl) {
     margin-left: calc($padding-72 * 3);
     margin-right: calc($padding-72 * 3);
   }
+
   &__welcome {
     margin-top: 40px;
     margin-right: auto;
     order: 1;
+
+    @include flex($flex-direction: column);
+    &:has(.hero-content__btn:hover) {
+      transform: translateX(0) rotate(1turn);
+      opacity: 1;
+    }
+    // &:hover {
+    //   .hero-content__hand {
+    //     transform: translateX(0) rotate(1turn);
+    //     opacity: 1;
+    //   }
+    //   .hero-content__btn {
+    //     background-color: $main-hl2;
+    //   }
+    // }
   }
+  &__btn {
+    &:hover {
+      background-color: $main-hl2;
+    }
+  }
+
+  &__hand {
+    height: 40px;
+    width: 40px;
+    margin-left: auto;
+    transform: translateX(-100%);
+    transition: all 0.4s ease;
+    opacity: 0;
+
+    &--animated {
+      transform: translateX(0) rotate(1turn);
+      opacity: 1;
+    }
+  }
+
   &__title {
     order: 2;
-    margin-top: calc(2 * $padding-16);
+    margin-top: $padding-16;
     @include flex($flex-direction: row);
     .hero-title-first {
       width: 100%;
-      margin-bottom: 24px;
       & > span:first-child {
         text-transform: uppercase;
       }
@@ -54,10 +98,12 @@
       }
     }
     .hero-title-second {
-      margin-left: auto;
       & > span:hover {
         text-transform: lowercase;
         color: $main-hl1;
+      }
+      @include respond(xl) {
+        margin-left: auto;
       }
     }
   }
@@ -83,16 +129,20 @@
 
     @include respond(md) {
       position: absolute;
-      right: 45px;
-      top: 15%;
+      right: 40px;
+      top: 10%;
     }
     @include respond(lg) {
-      right: 18%;
+      right: 115px;
       top: 10%;
     }
     @include respond(xl) {
-      right: 20%;
-      top: 10%;
+      right: 310px;
+      top: 9%;
+    }
+    @include respond(xxl) {
+      right: 35%;
+      top: 20%;
     }
 
     .profil {
@@ -101,7 +151,11 @@
       height: auto;
       border-radius: 8px;
       transition: all 0.3s ease;
-      filter: grayscale(1);
+      padding-bottom: 90px;
+
+      @include respond(lg) {
+        filter: grayscale(1);
+      }
 
       &:hover {
         filter: grayscale(0);
@@ -122,8 +176,8 @@
 
     .name-tag {
       position: absolute;
-      left: 32%;
-      bottom: 13px;
+      left: 29%;
+      bottom: 29%;
       color: $main-dark;
       z-index: 2;
       cursor: pointer;

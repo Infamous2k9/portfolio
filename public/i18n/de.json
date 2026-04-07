@@ -1,5 +1,7 @@
 {
+  "header": {},
   "hero": {
-    "text": "kontaktire mich"
+    "welcomeText": "Hi, ich bin der André",
+    "btnText": "kontaktiere mich"
   }
 }
