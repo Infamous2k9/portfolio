@@ -1,0 +1,12 @@
+<div class="snipet">
+  <figure class="snipet__figure">
+    <img
+      src="{{ background().mobile }}"
+      alt="{{ background().alt | translate }}"
+      class="snipet__image"
+    />
+    <figcaption [style.background-image]="'url(' + icon() + ')'" class="snipet__text">
+      {{ text() | translate }}
+    </figcaption>
+  </figure>
+</div>

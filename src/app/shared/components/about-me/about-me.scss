@@ -1,0 +1,55 @@
+@use "../../../../style/abstracts/" as *;
+.about-me {
+    color: $main-dark;
+    padding: 88px $padding-16;
+
+    @include flex($flex-direction: column);
+    gap: 40px;
+    &__title {
+        padding-bottom: calc($padding-16 * 2);
+    }
+    &__overline {
+    }
+    &__headline {
+    }
+    &__headline-text {
+        margin-top: $padding-16;
+    }
+    &__headline-animation {
+        width: 60%;
+        clip-path: inset(0 100% 0 0);
+        animation: slide-in-out linear 5s infinite;
+    }
+    &__content {
+    }
+    &__cta {
+        border: 1px solid $main-dark;
+        float: right;
+        margin-top: calc($padding-16 * 2);
+        cursor: pointer;
+
+        &:hover {
+            background-color: $main-hl3;
+        }
+    }
+    &__snipets {
+        li {
+            position: relative;
+            &:nth-child(1) {
+                transform: rotate(-4deg);
+                z-index: 3;
+            }
+            &:nth-child(2) {
+                margin-top: -65px;
+                z-index: 2;
+            }
+            &:nth-child(3) {
+                margin-top: -70px;
+                transform: rotate(4deg);
+                z-index: 1;
+            }
+        }
+    }
+    &__text {
+    }
+}

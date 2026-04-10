@@ -3,5 +3,64 @@
   "hero": {
     "welcomeText": "Hi, ich bin der André",
     "btnText": "kontaktiere mich"
+  },
+  "aboutme": {
+    "overline": "Wer ist André?",
+    "underlineImg": {
+      "opt1": {
+        "name": "blaue handgemalte linie",
+        "src": "/images/00_Hand-drawn-lines/01_About-me/Color-option-1.png"
+      },
+      "opt2": {
+        "name": "violett handgemalte linie",
+        "src": "/images/00_Hand-drawn-lines/01_About-me/Color-option-2.png"
+      },
+      "opt3": {
+        "name": "türkis handgemalte linie",
+        "src": "/images/00_Hand-drawn-lines/01_About-me/Color-option-3.png"
+      }
+    },
+    "headline": "Über Mich",
+    "content": "Hey, ich bin André. Schreibe ein paar Informationen über dich, die mit IT zu tun haben. Warum begeisterst du dich für das Programmieren? Was inspiriert dich, deine Programmierfähigkeiten zu verbessern? Lernst du aus jeder Herausforderung, während du nach der effizientesten oder elegantesten Lösung suchst? <br><br> Lass uns zusammenarbeiten und gemeinsam etwas Großartiges erschaffen!",
+    "btnText": "lass uns reden",
+    "snipets": {
+      "text": {
+        "location": "Wohnhaft nähe Köln",
+        "relocation": "Offen für Umzug",
+        "remote": "Offen für Homeoffice"
+      },
+      "background": {
+        "opt1": {
+          "mobile": {
+            "yellow": {
+              "name": "gelber schnipsel",
+              "src": "/images/02_Ripped-Paper/Option-1/Mobile/About-me-1.png"
+            },
+            "blue": {
+              "name": "blauer schnipsel",
+              "src": "/images/02_Ripped-Paper/Option-1/Mobile/About-me-2.png"
+            },
+            "orange": {
+              "name": "oranger schnipsel",
+              "src": "/images/02_Ripped-Paper/Option-1/Mobile/About-me-3.png"
+            }
+          },
+          "desktop": {
+            "yellow": {
+              "name": "gelber schnipsel",
+              "src": "/images/02_Ripped-Paper/Option-1/1-Yellow.png"
+            },
+            "blue": {
+              "name": "blauer schnipsel",
+              "src": "images/02_Ripped-Paper/Option-1/2-blue.png"
+            },
+            "orange": {
+              "name": "oranger schnipsel",
+              "src": "images/02_Ripped-Paper/Option-1/3-Orange.png"
+            }
+          }
+        }
+      }
+    }
   }
 }

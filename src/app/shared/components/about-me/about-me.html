@@ -1,1 +1,31 @@
-<p>about-me works!</p>
+<section class="about-me">
+  <div class="about-me__content">
+    <div class="about-me__title">
+      <span class="about-me__overline overline">{{ 'aboutme.overline' | translate }}</span>
+      <div class="about-me__headline">
+        <h2 class="about-me__headline-text">{{ 'aboutme.headline' | translate }}</h2>
+        <img
+          class="about-me__headline-animation"
+          src="{{ 'aboutme.underlineImg.opt1.src' | translate }}"
+          alt="{{ 'aboutme.underlineImg.opt1.name' | translate }}"
+        />
+      </div>
+    </div>
+
+    <p class="about-me__text">
+      {{ 'aboutme.content' | translate }}
+    </p>
+    <button class="about-me__cta btn-pill">{{ 'aboutme.btnText' | translate }}</button>
+  </div>
+  <ul class="about-me__snipets">
+    @for (snipet of snipets; track $index) {
+      <li>
+        <app-snipet
+          [icon]="snipet.icon"
+          [text]="snipet.text"
+          [background]="snipet.backgroundImages"
+        ></app-snipet>
+      </li>
+    }
+  </ul>
+</section>

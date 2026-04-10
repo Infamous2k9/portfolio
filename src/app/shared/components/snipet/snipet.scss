@@ -1,0 +1,44 @@
+@use "../../../../style/abstracts/" as *;
+
+.snipet {
+  position: relative;
+
+  &__figure {
+    position: relative;
+    display: inline-block;
+  }
+
+  &__image {
+    width: 100%;
+    display: block;
+  }
+
+  &__text {
+    font-family: Bricolage Grotesque;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 120%;
+    letter-spacing: 0%;
+    text-align: justify;
+    color: $main-base;
+
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-wrap: nowrap;
+
+    @include flex($align-items: center, $flex-wrap: nowrap);
+    gap: 12px;
+
+    pointer-events: none;
+
+    &::before {
+      content: "";
+      width: 40px;
+      height: 40px;
+      display: block;
+    }
+  }
+}
