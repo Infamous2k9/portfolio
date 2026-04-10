@@ -1,1 +1,28 @@
-<p>skills works!</p>
+<section class="skills">
+    <div class="skills__content">
+        <div class="skills__title">
+            <span class="skills__overline overline">my stack</span>
+            <div class="skills__headline">
+                <h2 class="skills__headline-text">Skill Set</h2>
+                <img class="skills__headline-animation" src="" alt="handdraw circle" />
+            </div>
+        </div>
+        <div class="skills__text-bg">
+            <p class="skills__text">
+                A short introduction of your skills. Highlight your experience of using different
+                front-end technologies and emphasise your openness to learning and adapting to new
+                technologies.
+            </p>
+        </div>
+    </div>
+    <div>
+        <ul class="skills__table">
+            @for (item of skills; track $index) {
+                <li>
+                    <app-skill [name]="item.name" [src]="item.src"></app-skill>
+                </li>
+            }
+        </ul>
+        <div class="skills__cta">pull to peel</div>
+    </div>
+</section>

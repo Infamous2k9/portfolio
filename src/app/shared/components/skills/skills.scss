@@ -1,0 +1,45 @@
+@use "../../../../style/abstracts/" as *;
+
+.skills {
+    background-image: url("/images/01_Background/Design-Size-Relation/03_Skills.png");
+    height: fit-content;
+    background-position: bottom;
+    background-size: cover;
+    padding: 88px $padding-16;
+
+    @include flex($flex-direction: column);
+    &__content {
+        color: $main-base;
+    }
+    &__cta {
+    }
+    &__headline {
+        margin-top: 8px;
+    }
+    &__headline-animation {
+    }
+    &__headline-text {
+        margin-top: calc(2 * $padding-16);
+    }
+    &__overline {
+    }
+    &__table {
+        margin-top: 40px;
+        color: $main-base;
+        @include flex($justify-content: space-between);
+    }
+    &__text {
+        text-align: center;
+        color: $main-dark;
+        padding: 40px $padding-16;
+    }
+    &__text-bg {
+        background-image: url("/images/02_Ripped-Paper/1B-Mobile.png");
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    &__title {
+        @include flex($flex-direction: column, $align-items: flex-end);
+    }
+}
