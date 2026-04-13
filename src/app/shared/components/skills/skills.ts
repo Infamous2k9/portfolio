@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { Skill } from '../skill/skill';
 
 @Component({
@@ -8,6 +8,12 @@ import { Skill } from '../skill/skill';
     styleUrl: './skills.scss',
 })
 export class Skills {
+    isPeeled = signal(false);
+    peel() {
+        this.isPeeled.set(true);
+        console.log(this.isPeeled);
+    }
+
     skills = [
         {
             name: 'HTML',
@@ -60,6 +66,16 @@ export class Skills {
         {
             name: 'Material Design',
             src: '/icons/skills/material-design.png',
+        },
+        {
+            name: 'React',
+            src: '/icons/skills/react.svg',
+            interested: true,
+        },
+        {
+            name: 'Vue.js',
+            src: '/icons/skills/vue.svg',
+            interested: true,
         },
     ];
 }

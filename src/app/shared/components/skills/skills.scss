@@ -12,32 +12,90 @@
         color: $main-base;
     }
     &__cta {
+        font-family: Kalam;
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 40px;
+        letter-spacing: 0%;
+        text-align: center;
+
+        height: 200px;
+        width: 200px;
+        background-image: url("/images/03_Stickers/01_Skills-Peel-off/Default.png");
+        background-size: contain;
+        color: $main-base;
+        transform: rotate(8deg);
+        &::before {
+            content: "";
+            display: block;
+            height: 40px;
+            width: 51px;
+            transform: translate(140%, -20%);
+            background-image: url("/images/03_Stickers/Arrow.png");
+            background-size: cover;
+        }
+        &--active {
+            background-image: url("/images/03_Stickers/01_Skills-Peel-off/Final.png");
+            &::before {
+                content: none;
+            }
+        }
+        //animation für peel
+        &-text {
+            font-family: Bricolage Grotesque;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            text-align: center;
+            color: #f8f9fa;
+            padding-bottom: 8px;
+            margin-top: $padding-16;
+        }
+        &-skills {
+            color: #f8f9fa;
+            font-family: Bricolage Grotesque;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            text-align: center;
+            width: auto;
+            @include flex($justify-content: space-around);
+        }
     }
     &__headline {
         margin-top: 8px;
     }
     &__headline-animation {
+        width: 60%;
+        position: absolute;
+        transform: translateY(10%) translateX(-1%);
+        clip-path: inset(0 100% 0 0);
+        animation: slide-in-out linear 5s infinite;
     }
     &__headline-text {
-        margin-top: calc(2 * $padding-16);
+        position: relative;
+        margin-top: $padding-16;
+        margin-bottom: calc(2 * $padding-16);
+        z-index: 2;
     }
-    &__overline {
-    }
+
     &__table {
         margin-top: 40px;
         color: $main-base;
-        @include flex($justify-content: space-between);
+        @include flex($justify-content: space-evenly);
+        gap: $padding-16;
+        margin-bottom: 220px;
     }
+
     &__text {
+        position: absolute;
+        transform: translateY(-100%) translateX(-10px);
+        z-index: 2;
         text-align: center;
         color: $main-dark;
         padding: 40px $padding-16;
-    }
-    &__text-bg {
-        background-image: url("/images/02_Ripped-Paper/1B-Mobile.png");
-        background-position: center;
-        background-size: contain;
-        background-repeat: no-repeat;
     }
     &__title {
         @include flex($flex-direction: column, $align-items: flex-end);

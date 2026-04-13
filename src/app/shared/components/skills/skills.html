@@ -3,11 +3,16 @@
         <div class="skills__title">
             <span class="skills__overline overline">my stack</span>
             <div class="skills__headline">
+                <img
+                    class="skills__headline-animation"
+                    src="/images/00_Hand-drawn-lines/02_Skills/Color option 1.png"
+                    alt="handdraw circle"
+                />
                 <h2 class="skills__headline-text">Skill Set</h2>
-                <img class="skills__headline-animation" src="" alt="handdraw circle" />
             </div>
         </div>
-        <div class="skills__text-bg">
+        <div class="skills__text-wrapper">
+            <img class="skills__bg-img" src="/images/02_Ripped-Paper/1B-Mobile.png" alt="text-bg" />
             <p class="skills__text">
                 A short introduction of your skills. Highlight your experience of using different
                 front-end technologies and emphasise your openness to learning and adapting to new
@@ -18,11 +23,38 @@
     <div>
         <ul class="skills__table">
             @for (item of skills; track $index) {
-                <li>
-                    <app-skill [name]="item.name" [src]="item.src"></app-skill>
-                </li>
+                @if (!item?.interested) {
+                    <li>
+                        <app-skill [name]="item.name" [src]="item.src"></app-skill>
+                    </li>
+                }
             }
+            <li>
+                <button
+                    class="skills__cta"
+                    (click)="peel()"
+                    [class.skills__cta--active]="isPeeled()"
+                >
+                    @if (isPeeled()) {
+                        <p class="skills__cta-text">Also, I'm interested in diving into:</p>
+                        <div class="skills__cta-skills">
+                            @for (item of skills; track $index) {
+                                @if (item?.interested) {
+                                    <app-skill
+                                        class=""
+                                        [name]="item.name"
+                                        [src]="item.src"
+                                    ></app-skill>
+                                }
+                            }
+                        </div>
+                    } @else {
+                        Pull to
+                        <br />
+                        peel
+                    }
+                </button>
+            </li>
         </ul>
-        <div class="skills__cta">pull to peel</div>
     </div>
 </section>
