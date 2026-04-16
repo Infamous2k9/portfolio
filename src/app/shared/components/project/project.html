@@ -1,0 +1,12 @@
+<div class="project-card">
+    <figure class="project-card__image">
+        <img src="{{ image() }}" alt="{{ title() }} image" />
+    </figure>
+    <div class="project-card__text">
+        <h3>{{ title() }}</h3>
+        <p>{{ description() }}</p>
+    </div>
+    <button class="btn-pill btn-pill--secondary btn-push btn-push--dark">
+        Projects details {{ projectIndex() }}
+    </button>
+</div>

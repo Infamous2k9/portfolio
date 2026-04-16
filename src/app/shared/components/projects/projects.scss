@@ -1,0 +1,31 @@
+@use "../../../../style/abstracts/" as *;
+
+.projects {
+    padding: 0 $padding-16;
+
+    &__headline {
+        margin-top: 16px;
+    }
+    &__headline-animation {
+        width: 65%;
+        position: absolute;
+        transform: translateY(10%) translateX(-1%);
+        clip-path: inset(0 100% 0 0);
+        animation: slide-in-out linear 5s infinite;
+    }
+    &__headline-text {
+    }
+    &__list {
+        margin-top: 40px;
+        @include flex($flex-direction: column);
+        gap: 40px;
+    }
+    &__overline {
+    }
+    &__title {
+        margin-bottom: 32px;
+    }
+    &__description {
+        margin-top: 64px;
+    }
+}

@@ -48,20 +48,8 @@ export class Skills {
             src: '/icons/skills/rest-api.svg',
         },
         {
-            name: 'Scrum',
-            src: '/icons/skills/scrum.svg',
-        },
-        {
             name: 'Phython',
-            src: '/icons/skills/scrum.svg',
-        },
-        {
-            name: 'C++',
-            src: '/icons/skills/scrum.svg',
-        },
-        {
-            name: 'Java',
-            src: '/icons/skills/scrum.svg',
+            src: '/icons/skills/Python.svg',
         },
         {
             name: 'Material Design',

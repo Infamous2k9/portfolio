@@ -1,1 +1,27 @@
-<p>projects works!</p>
+<section class="projects">
+    <div class="projects__title">
+        <span class="projects__overline overline">MY CRAFT</span>
+        <div class="projects__headline">
+            <h2 class="projects__headline-text">Projects</h2>
+            <img
+                class="projects__headline-animation"
+                src="/images/00_Hand-drawn-lines/03_Portfolio/Color-option-1.png"
+                alt="handdraw "
+            />
+        </div>
+    </div>
+    <p class="projects__description">
+        Encourage people to take a look and interact with your projects. Highlight your approach to
+        creating responsive, user-friendly projects with efficient code.
+    </p>
+    <div class="projects__list">
+        @for (item of projects; track $index) {
+            <app-project
+                [title]="item.name"
+                [description]="item.description"
+                [image]="item.image"
+                [projectIndex]="$index"
+            ></app-project>
+        }
+    </div>
+</section>
