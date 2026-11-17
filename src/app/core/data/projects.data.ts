@@ -6,26 +6,44 @@ import { Project } from '../models/portfolio.models';
  */
 export const PROJECTS: readonly Project[] = [
   {
-    slug: 'join',
-    name: 'Join',
+    slug: 'fable-spaces',
+    name: 'Fable Spaces',
     image: '/images/project-images/join-laptop.png',
     technologies: ['JavaScript', 'HTML', 'CSS'],
-    durationWeeks: 4,
-    // TODO: add the real repository and live URLs.
-    githubUrl: '',
-    liveUrl: '',
+    durationWeeks: 0,
+    // TODO: add livelink
+    githubUrl: 'https://github.com/calvin-kamp/fable-spaces',
+    liveUrl: 'https://fable-spaces.com',
     featured: true,
+  },
+  {
+    slug: 'videoflix',
+    name: 'Videoflix',
+    image: '/images/project-images/videoflix.png',
+    technologies: ['Django', 'Python', 'REST-API'],
+    durationWeeks: 5,
+    githubUrl: 'https://github.com/Infamous2k9/videoflix-backend',
+    liveUrl: '',
+    featured: false,
+  },
+  {
+    slug: 'coderr',
+    name: 'Coderr',
+    image: '/images/project-images/coderr.png',
+    technologies: ['Django', 'Python', 'REST-API'],
+    durationWeeks: 4,
+    githubUrl: 'https://github.com/Infamous2k9/coderr_backend',
+    liveUrl: 'https://coderr.andre-funk.de/',
+    featured: false,
   },
   {
     slug: 'valhalla-rush',
     name: 'ValhallaRush',
-    // TODO: replace with a ValhallaRush screenshot.
-    image: '/images/project-images/join-laptop.png',
-    technologies: ['JavaScript', 'HTML', 'CSS'],
-    durationWeeks: 4,
-    // TODO: add the real repository and live URLs.
-    githubUrl: '',
-    liveUrl: '',
+    image: '/images/project-images/valhallarush.png',
+    technologies: ['TypeScript', 'HTML', 'CSS'],
+    durationWeeks: 3,
+    githubUrl: 'https://github.com/Infamous2k9/ValhallaRush',
+    liveUrl: 'https://andrefunk.developerakademie.net/valhallarush/',
     featured: false,
   },
   {

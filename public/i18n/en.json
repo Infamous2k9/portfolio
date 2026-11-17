@@ -47,15 +47,23 @@
     "items": {
       "join": {
         "description": "Task manager inspired by the Kanban system. Create and organize tasks using drag and drop functions, assign users and categories.",
-        "details": "TODO: Describe your role and the workflow in this project. Tell a recruiter how you worked independently or in a team and what you learned."
+        "details": "Developed in a team of developers using an agile workflow with clearly distributed tasks and regular code reviews via Git. I implemented the board view with drag and drop as well as the task forms, and learned how to coordinate features and merge branches cleanly in a team."
       },
       "valhalla-rush": {
-        "description": "TODO: Short description of ValhallaRush.",
-        "details": "TODO: Describe your role and the workflow in this project."
+        "description": "2D jump and run game with a Norse theme. Run, jump and fight your way through enemies, collect items and defeat the final boss.",
+        "details": "Built independently with object-oriented JavaScript and the HTML5 canvas. I structured the game into classes for characters, enemies and objects, and implemented the game loop, collision detection, animations and sound. This project taught me how to plan a larger codebase with inheritance and clean class responsibilities."
       },
       "pokedex": {
-        "description": "TODO: Short description of the Pokedex.",
-        "details": "TODO: Describe your role and the workflow in this project."
+        "description": "Pokédex based on the PokéAPI. Browse Pokémon, search by name and view detailed stats, types and abilities in an overlay.",
+        "details": "Built independently with JavaScript, HTML and CSS. I fetched the data asynchronously from a REST API, loaded Pokémon in batches to keep the app fast and rendered them dynamically. I learned how to work with async/await, handle API responses and build a responsive card layout."
+      },
+      "coderr": {
+        "description": "REST API for a freelancer platform where businesses offer services in three packages and customers can place orders and write reviews.",
+        "details": "Built independently with Python and Django REST Framework. I implemented authentication, business and customer profiles, offers with filtering, search, sorting and pagination, orders and reviews, all covered by tests. The API runs with PostgreSQL in Docker and is deployed on my own server. Working through mentor reviews taught me to follow an API specification precisely and to keep views slim."
+      },
+      "videoflix": {
+        "description": "Video streaming platform backend. Users register, activate their account by email and stream videos in different resolutions.",
+        "details": "Built independently with Python and Django REST Framework. I implemented token-based authentication with account activation and password reset via email, automatic video conversion into multiple resolutions with FFmpeg in background jobs, and HLS streaming. The project runs in Docker with PostgreSQL and Redis."
       }
     }
   },
@@ -69,7 +77,7 @@
     },
     "items": {
       "first": "[TODO: Feedback from a colleague]",
-      "second": "[TODO: Feedback from a colleague]",
+      "second": "During our course at the Developer Akademie, Andre and I spent many evenings coding together, and I really enjoyed that time. He almost always had a solution when I got stuck, and whenever I doubted myself, he lifted me back up.",
       "third": "[TODO: Feedback from a colleague]"
     }
   },
@@ -129,7 +137,7 @@
     "sections": {
       "provider": {
         "title": "Information according to § 5 DDG",
-        "text": "André Funk\n[TODO: Street and house number]\n[TODO: Postcode and city]\nGermany"
+        "text": "André Funk\nKölner Straße 290\n51645 Gummersbach\nGermany"
       },
       "contact": {
         "title": "Contact",
@@ -155,11 +163,11 @@
     "sections": {
       "controller": {
         "title": "Controller",
-        "text": "André Funk\n[TODO: Street and house number]\n[TODO: Postcode and city]\nEmail: andre.funk@icloud.com"
+        "text": "André Funk\nKölner Straße 290\n51645 Gummersbach\nEmail: andre.funk@icloud.com"
       },
       "hosting": {
         "title": "Hosting and server log files",
-        "text": "This website is hosted by [TODO: hosting provider]. When you visit the site, the server automatically stores technical data such as your IP address, browser type and time of access. This is necessary to deliver the website securely (Art. 6 (1) (f) GDPR)."
+        "text": "This website is hosted by Hostinger. When you visit the site, the server automatically stores technical data such as your IP address, browser type and time of access. This is necessary to deliver the website securely (Art. 6 (1) (f) GDPR)."
       },
       "contactForm": {
         "title": "Contact form",
