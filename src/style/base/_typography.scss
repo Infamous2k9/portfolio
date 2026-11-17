@@ -95,10 +95,7 @@
 }
 
 h1 {
-    font-family: "Bricolage Grotesque", Arial, Helvetica, sans-serif;
-    font-size: 50px;
-    font-weight: 700;
-    line-height: 100%;
+    @include text-style(50px, 700, 100%);
 
     @include respond(md) {
         font-size: 69px;
@@ -111,64 +108,56 @@ h1 {
     }
 }
 
-h2 {
-    font-family: Bricolage Grotesque;
-    font-weight: 700;
-    font-style: Bold;
-    font-size: 46px;
-    line-height: 100%;
-    letter-spacing: 0%;
+// Page titles on sub pages (project detail, legal notice) should not use the giant hero size.
+.page-title {
+    @include text-style(46px, 700, 100%);
+
+    @include respond(lg) {
+        font-size: 64px;
+    }
 }
+
+h2 {
+    @include text-style(46px, 700, 100%);
+}
+
 h3 {
-    font-family: Bricolage Grotesque;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 100%;
-    letter-spacing: 0%;
+    @include text-style(18px, 700, 100%);
+
+    @include respond(lg) {
+        font-size: 24px;
+    }
 }
 
 p {
-    font-family: Bricolage Grotesque;
-    font-weight: 400;
-    font-style: Regular;
-    font-size: 16px;
-    line-height: 100%;
-    letter-spacing: 0%;
+    @include text-style(16px, 400, 130%);
 }
+
 .overline {
-    font-family: Bricolage Grotesque;
-    font-weight: 500;
-    font-style: Medium;
-    font-size: 16px;
-    line-height: 100%;
-    letter-spacing: 0%;
+    @include text-style(16px, 500, 100%);
     text-transform: uppercase;
 }
 
 .btn-pill {
-    font-family: "Bricolage Grotesque", Arial, Helvetica, sans-serif;
-    font-weight: 500;
-    font-style: Medium;
-    font-size: 16px;
-    line-height: 120%;
-    letter-spacing: 0%;
-    text-align: justify;
+    @include text-style(16px, 500, 120%);
 }
+
 .name-tag {
-    font-family: "Kalam", Arial, Helvetica, sans-serif;
-    font-weight: 700;
-    font-style: Bold;
-    font-size: 22px;
-    line-height: 120%;
-    letter-spacing: 0%;
+    @include text-style(22px, 700, 120%, $font-handwriting);
 }
 
 .snipet-text {
-    font-family: Bricolage Grotesque;
-    font-weight: 400;
-    font-style: Regular;
-    font-size: 16px;
-    line-height: 120%;
-    letter-spacing: 0%;
-    text-align: justify;
+    @include text-style(16px, 400, 120%);
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+    border: 0;
 }

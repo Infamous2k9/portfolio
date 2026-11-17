@@ -1,60 +1,49 @@
-<section class="skills">
-    <div class="skills__content">
-        <div class="skills__title">
-            <span class="skills__overline overline">my stack</span>
-            <div class="skills__headline">
-                <img
-                    class="skills__headline-animation"
-                    src="/images/00_Hand-drawn-lines/02_Skills/Color option 1.png"
-                    alt="handdraw circle"
-                />
-                <h2 class="skills__headline-text">Skill Set</h2>
-            </div>
+<section class="skills" id="skills">
+  <div class="container">
+    <div class="skills__header">
+      <div class="skills__title">
+        <span class="skills__overline overline">{{ 'skills.overline' | translate }}</span>
+        <div class="skills__headline">
+          <img
+            class="skills__headline-animation"
+            src="/images/00_Hand-drawn-lines/02_Skills/Color option 1.png"
+            alt=""
+          />
+          <h2 class="skills__headline-text">{{ 'skills.headline' | translate }}</h2>
         </div>
-        <div class="skills__text-wrapper">
-            <img class="skills__bg-img" src="/images/02_Ripped-Paper/1B-Mobile.png" alt="text-bg" />
-            <p class="skills__text">
-                A short introduction of your skills. Highlight your experience of using different
-                front-end technologies and emphasise your openness to learning and adapting to new
-                technologies.
-            </p>
-        </div>
+      </div>
+      <p class="skills__text">{{ 'skills.text' | translate }}</p>
     </div>
-    <div>
-        <ul class="skills__table">
-            @for (item of skills; track $index) {
-                @if (!item?.interested) {
-                    <li>
-                        <app-skill [name]="item.name" [src]="item.src"></app-skill>
-                    </li>
-                }
+
+    <div class="skills__body">
+      <ul class="skills__table">
+        @for (skill of currentSkills; track skill.name) {
+          <li>
+            <app-skill [name]="skill.name" [icon]="skill.icon" />
+          </li>
+        }
+      </ul>
+
+      <!-- Sticker: a transparent button covers it, so the skill figures are not nested in a button -->
+      <div class="skills__cta" [class.skills__cta--active]="isPeeled()">
+        <button
+          type="button"
+          class="skills__cta-trigger"
+          [attr.aria-expanded]="isPeeled()"
+          [attr.aria-label]="'skills.peelLabel' | translate"
+          (click)="togglePeel()"
+        ></button>
+        @if (isPeeled()) {
+          <p class="skills__cta-text">{{ 'skills.interestedIn' | translate }}</p>
+          <div class="skills__cta-skills">
+            @for (skill of interestedSkills; track skill.name) {
+              <app-skill [name]="skill.name" [icon]="skill.icon" />
             }
-            <li>
-                <button
-                    class="skills__cta"
-                    (click)="peel()"
-                    [class.skills__cta--active]="isPeeled()"
-                >
-                    @if (isPeeled()) {
-                        <p class="skills__cta-text">Also, I'm interested in diving into:</p>
-                        <div class="skills__cta-skills">
-                            @for (item of skills; track $index) {
-                                @if (item?.interested) {
-                                    <app-skill
-                                        class=""
-                                        [name]="item.name"
-                                        [src]="item.src"
-                                    ></app-skill>
-                                }
-                            }
-                        </div>
-                    } @else {
-                        Pull to
-                        <br />
-                        peel
-                    }
-                </button>
-            </li>
-        </ul>
+          </div>
+        } @else {
+          <p class="skills__cta-peel" aria-hidden="true">{{ 'skills.pullToPeel' | translate }}</p>
+        }
+      </div>
     </div>
+  </div>
 </section>

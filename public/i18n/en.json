@@ -1,70 +1,185 @@
 {
-  "header": {},
+  "nav": {
+    "aboutMe": "About me",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "header": {
+    "home": "Back to the start page",
+    "mainNav": "Main navigation",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "toggleLanguage": "Switch language between English and German"
+  },
   "hero": {
-    "welcomeText": "Hi, I´m André",
-    "btnText": "get in touch"
+    "helloWorld": "Hello world",
+    "welcomeText": "Hi, I'm André",
+    "btnText": "Get in touch",
+    "profileAlt": "Portrait of André Funk"
   },
   "aboutme": {
-    "overline": "Who´s André?",
-    "underlineImg": {
-      "opt1": {
-        "name": "blaue handgemalte linie",
-        "src": "/images/00_Hand-drawn-lines/01_About-me/Color-option-1.png"
-      },
-      "opt2": {
-        "name": "violett handgemalte linie",
-        "src": "/images/00_Hand-drawn-lines/01_About-me/Color-option-2.png"
-      },
-      "opt3": {
-        "name": "türkis handgemalte linie",
-        "src": "/images/00_Hand-drawn-lines/01_About-me/Color-option-3.png"
-      }
-    },
-    "headline": "About Me",
-    "content": "Hey there, I'm André. Write some information about yourself that is IT related. Why are you passionate about coding? What is your source of inspiration for improving your programming skills? Do you learn from each challenge as you search for the most efficient or elegant solution? <br> <br> Let’s collaborate and build something remarkable together!",
-    "btnText": "let´s talk",
+    "overline": "Who's André?",
+    "headline": "About me",
+    "paragraph1": "Hey there, I'm André, a junior full-stack developer from near Cologne. I have been building frontends for the longest time, and I enjoy the backend side with Django REST Framework just as much. What drives me is turning everyday problems into simple, useful web applications.",
+    "paragraph2": "I learn from every challenge and keep looking for the clean, efficient solution. Let's collaborate and build something remarkable together!",
+    "btnText": "Let's talk",
     "snipets": {
-      "text": {
-        "location": "Based near Colonge",
-        "relocation": "Open to Relocate",
-        "remote": "Open to work remote"
+      "location": "Based near Cologne",
+      "relocation": "Open to relocate",
+      "remote": "Open to work remote"
+    }
+  },
+  "skills": {
+    "overline": "My stack",
+    "headline": "Skill set",
+    "text": "I work with modern front-end technologies like Angular and TypeScript and build APIs with Python and Django. I'm always open to learning new tools and adapting to what a project needs.",
+    "interestedIn": "Also, I'm interested in diving into:",
+    "pullToPeel": "Pull to peel",
+    "peelLabel": "Show technologies I want to learn next"
+  },
+  "projects": {
+    "overline": "My craft",
+    "headline": "Projects",
+    "description": "Take a look at my projects and try them out. Each one shows my approach to building responsive, user-friendly applications with clean and efficient code.",
+    "featuredSticker": "Featured project",
+    "detailsBtn": "Project details",
+    "items": {
+      "join": {
+        "description": "Task manager inspired by the Kanban system. Create and organize tasks using drag and drop functions, assign users and categories.",
+        "details": "TODO: Describe your role and the workflow in this project. Tell a recruiter how you worked independently or in a team and what you learned."
       },
-      "icons": {
-        "location": "/icons/Location.png",
-        "remote": "/icons/Remote.png",
-        "relocation": "/icons/Relocation.png"
+      "valhalla-rush": {
+        "description": "TODO: Short description of ValhallaRush.",
+        "details": "TODO: Describe your role and the workflow in this project."
       },
-      "background": {
-        "opt1": {
-          "mobile": {
-            "yellow": {
-              "name": "yellow snipet",
-              "src": "/images/02_Ripped-Paper/Option-1/Mobile/About-me-1.png"
-            },
-            "blue": {
-              "name": "blue snipet",
-              "src": "/images/02_Ripped-Paper/Option-1/Mobile/About-me-2.png"
-            },
-            "orange": {
-              "name": "orange snipet",
-              "src": "/images/02_Ripped-Paper/Option-1/Mobile/About-me-3.png"
-            }
-          },
-          "desktop": {
-            "yellow": {
-              "name": "yellow snipet",
-              "src": "/images/02_Ripped-Paper/Option-1/1-Yellow.png"
-            },
-            "blue": {
-              "name": "blue snipet",
-              "src": "images/02_Ripped-Paper/Option-1/2-blue.png"
-            },
-            "orange": {
-              "name": "orange snipet",
-              "src": "images/02_Ripped-Paper/Option-1/3-Orange.png"
-            }
-          }
-        }
+      "pokedex": {
+        "description": "TODO: Short description of the Pokedex.",
+        "details": "TODO: Describe your role and the workflow in this project."
+      }
+    }
+  },
+  "testimonials": {
+    "overline": "In their words:",
+    "headline": "Colleagues' thoughts",
+    "profile": "Profile",
+    "roles": {
+      "frontendDeveloper": "Frontend Developer",
+      "fullstackDeveloper": "Fullstack Developer"
+    },
+    "items": {
+      "first": "[TODO: Feedback from a colleague]",
+      "second": "[TODO: Feedback from a colleague]",
+      "third": "[TODO: Feedback from a colleague]"
+    }
+  },
+  "contact": {
+    "overline": "Contact me",
+    "headline": "Ready to work together?",
+    "paragraph1": "I'm looking for a frontend or full-stack position, remote or hybrid. Tell me about your team and your project, and let's find out how I can contribute.",
+    "paragraph2": "Need a motivated developer who enjoys solving real problems? Send me a message!",
+    "form": {
+      "name": {
+        "label": "What's your name?",
+        "placeholder": "Your name goes here",
+        "error": "Please enter your name."
+      },
+      "email": {
+        "label": "What's your email?",
+        "placeholder": "youremail@email.com",
+        "error": "Please enter a valid email address."
+      },
+      "message": {
+        "label": "How can I help you?",
+        "placeholder": "Hello André, I am interested in…",
+        "error": "Please write a message with at least 10 characters."
+      },
+      "privacy": {
+        "before": "I've read the",
+        "link": "privacy policy",
+        "after": "and agree to the processing of my data as outlined.",
+        "error": "Please accept the privacy policy."
+      },
+      "send": "Send",
+      "sending": "Sending…",
+      "success": "Thank you! Your message has been sent.",
+      "failure": "Sorry, something went wrong. Please try again or write me an email."
+    }
+  },
+  "footer": {
+    "legalNotice": "Legal notice"
+  },
+  "projectDetail": {
+    "goBack": "Go back",
+    "description": "Description",
+    "implementation": "Implementation details",
+    "duration": "Duration",
+    "weeks": "weeks",
+    "technologies": "Technologies used",
+    "liveTest": "Live test",
+    "nextProject": "Next project",
+    "notFound": "Project not found"
+  },
+  "legal": {
+    "back": "Back"
+  },
+  "imprint": {
+    "title": "Legal notice",
+    "date": "Last updated: November 2026",
+    "sections": {
+      "provider": {
+        "title": "Information according to § 5 DDG",
+        "text": "André Funk\n[TODO: Street and house number]\n[TODO: Postcode and city]\nGermany"
+      },
+      "contact": {
+        "title": "Contact",
+        "text": "Email: andre.funk@icloud.com"
+      },
+      "liability": {
+        "title": "Liability for content",
+        "text": "The content of this website was created with care. However, I cannot guarantee that it is complete, correct or up to date."
+      },
+      "links": {
+        "title": "Liability for links",
+        "text": "This website contains links to external websites. I have no influence on their content and am therefore not responsible for it. The respective provider is always responsible for the content of linked pages."
+      },
+      "copyright": {
+        "title": "Copyright",
+        "text": "The content and code created by me on this website are subject to German copyright law. The design of this portfolio is based on a template by the Developer Akademie GmbH."
+      }
+    }
+  },
+  "privacy": {
+    "title": "Privacy policy",
+    "date": "Last updated: November 2026",
+    "sections": {
+      "controller": {
+        "title": "Controller",
+        "text": "André Funk\n[TODO: Street and house number]\n[TODO: Postcode and city]\nEmail: andre.funk@icloud.com"
+      },
+      "hosting": {
+        "title": "Hosting and server log files",
+        "text": "This website is hosted by [TODO: hosting provider]. When you visit the site, the server automatically stores technical data such as your IP address, browser type and time of access. This is necessary to deliver the website securely (Art. 6 (1) (f) GDPR)."
+      },
+      "contactForm": {
+        "title": "Contact form",
+        "text": "If you send me a message via the contact form, I process your name, email address and message only to answer your request (Art. 6 (1) (b) GDPR). The data is sent to me by email and deleted as soon as it is no longer needed."
+      },
+      "localStorage": {
+        "title": "Local storage",
+        "text": "Your language selection (English/German) is saved in your browser's local storage so that the site remembers it on your next visit. This is technically necessary for the function you requested (§ 25 (2) no. 2 TDDDG). No tracking or analytics tools are used."
+      },
+      "fonts": {
+        "title": "Fonts",
+        "text": "All fonts are hosted locally on this server. No connection to external font providers is made."
+      },
+      "rights": {
+        "title": "Your rights",
+        "text": "You have the right to access, rectification, erasure, restriction of processing, data portability and to object to the processing of your data (Art. 15–21 GDPR). Just send me an email."
+      },
+      "complaint": {
+        "title": "Right to lodge a complaint",
+        "text": "You have the right to lodge a complaint with a data protection supervisory authority, for example the State Commissioner for Data Protection and Freedom of Information of North Rhine-Westphalia (LDI NRW)."
       }
     }
   }

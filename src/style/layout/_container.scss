@@ -1,0 +1,7 @@
+@use "../abstracts" as *;
+
+// Usage: <section class="my-section"><div class="container">…</div></section>
+// The section paints the full-width background, .container keeps the content at desktop width.
+.container {
+  @include container;
+}

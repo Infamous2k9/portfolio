@@ -1,0 +1,44 @@
+@use "../../../../style/abstracts/" as *;
+
+.lang-switch {
+  @include flex($align-items: center, $flex-wrap: nowrap);
+  gap: 12px;
+  font-weight: 600;
+
+  &__label {
+    color: $main-base;
+    font-weight: 600;
+    transition: color 0.2s;
+
+    &--active,
+    &:hover {
+      color: $main-hl3;
+    }
+  }
+
+  &__toggle {
+    position: relative;
+    width: 32px;
+    height: 8px;
+    padding: 0;
+    border-radius: 999px;
+    background: $main-hl3;
+  }
+
+  &__slider {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    border: 1px solid $main-base;
+    border-radius: 50%;
+    background: $main-hl2;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease;
+  }
+
+  &--de &__slider {
+    transform: translate(16px, -50%);
+  }
+}

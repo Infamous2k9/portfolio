@@ -1,0 +1,26 @@
+@use "../../../../style/abstracts/" as *;
+
+:host {
+  display: block;
+  width: fit-content;
+}
+
+.brand-logo {
+  display: block;
+
+  &__text {
+    font-family: "JetBrains Mono", "Fira Code", monospace;
+    font-size: 28px;
+    font-weight: 600;
+    fill: currentColor;
+  }
+
+  &__accent {
+    fill: $main-hl2;
+    transition: fill 0.3s ease;
+  }
+
+  &:hover &__accent {
+    fill: $main-hl1;
+  }
+}

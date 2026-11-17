@@ -1,32 +1,25 @@
-import { Component, HostListener } from '@angular/core';
-import { Header } from '../../../layout/header/header';
+import { UpperCasePipe } from '@angular/common';
+import { Component, signal } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { TranslatePipe } from '@ngx-translate/core';
-import { TitleCasePipe, UpperCasePipe } from '@angular/common';
+import { Header } from '../../../layout/header/header';
+import { SocialLinks } from '../social-links/social-links';
+
+const TITLE_FIRST = 'fullstack';
+const TITLE_SECOND = 'developer';
 
 @Component({
   selector: 'app-hero',
-  imports: [Header, TranslatePipe, UpperCasePipe, TitleCasePipe],
+  imports: [Header, SocialLinks, RouterLink, TranslatePipe, UpperCasePipe],
   templateUrl: './hero.html',
   styleUrl: './hero.scss',
 })
 export class Hero {
-  isHoveringImg = false;
-  isHoveringWelcome = false;
-  innerWidth = 0;
+  protected readonly isHoveringImg = signal(false);
+  protected readonly isHoveringWelcome = signal(false);
 
-  headlineText = {
-    fullstack: ['f', 'u', 'l', 'l', 's', 't', 'a', 'c', 'k'],
-    developer: ['d', 'e', 'v', 'e', 'l', 'o', 'p', 'e', 'r'],
-  };
-  ngOnInit() {
-    this.innerWidth = window.innerWidth;
-  }
-  @HostListener('window:resize')
-  onResize() {
-    this.innerWidth = window.innerWidth;
-  }
-
-  isUppercase(item: string) {
-    return item === item.toUpperCase();
-  }
+  /** Read by screen readers instead of the single letters. */
+  protected readonly titleLabel = `${TITLE_FIRST} ${TITLE_SECOND}`;
+  protected readonly titleFirstLetters = TITLE_FIRST.split('');
+  protected readonly titleSecondLetters = TITLE_SECOND.split('');
 }

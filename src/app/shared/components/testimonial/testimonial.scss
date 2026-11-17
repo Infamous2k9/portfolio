@@ -1,0 +1,50 @@
+@use "../../../../style/abstracts/" as *;
+
+$sticker-path: "/images/03_Stickers/02_Testimonials/Color option 1";
+
+:host {
+  display: block;
+}
+
+.testimonial {
+  @include flex($flex-direction: column, $justify-content: space-between, $flex-wrap: nowrap);
+  aspect-ratio: 1799 / 1180;
+  padding: 12% 10% 9%;
+  color: $main-dark;
+  background-image: url("#{$sticker-path}/A.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+
+  &__quote p {
+    @include text-style(15px, 400, 130%);
+  }
+
+  &__author {
+    @include flex($justify-content: space-between, $align-items: flex-end, $flex-wrap: nowrap);
+    gap: 8px;
+  }
+
+  &__name {
+    display: block;
+    font-weight: 700;
+  }
+
+  &__role {
+    display: block;
+    font-size: 12px;
+  }
+
+  &__profile {
+    font-weight: 700;
+    font-size: 14px;
+    text-decoration: underline;
+
+    &:hover {
+      color: $main-light;
+    }
+  }
+}
+
+:host(.testimonial--b) .testimonial {
+  background-image: url("#{$sticker-path}/B.png");
+}

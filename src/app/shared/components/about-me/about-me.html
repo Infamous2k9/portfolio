@@ -1,31 +1,36 @@
-<section class="about-me">
-  <div class="about-me__content">
-    <div class="about-me__title">
-      <span class="about-me__overline overline">{{ 'aboutme.overline' | translate }}</span>
-      <div class="about-me__headline">
-        <h2 class="about-me__headline-text">{{ 'aboutme.headline' | translate }}</h2>
-        <img
-          class="about-me__headline-animation"
-          src="{{ 'aboutme.underlineImg.opt1.src' | translate }}"
-          alt="{{ 'aboutme.underlineImg.opt1.name' | translate }}"
-        />
-      </div>
-    </div>
+<section class="about-me" id="about-me">
+  <div class="container about-me__inner">
+    <ul class="about-me__snipets">
+      @for (snipet of snipets; track snipet.textKey) {
+        <li>
+          <app-snipet
+            [icon]="snipet.icon"
+            [textKey]="snipet.textKey"
+            [background]="snipet.background"
+          />
+        </li>
+      }
+    </ul>
 
-    <p class="about-me__text">
-      {{ 'aboutme.content' | translate }}
-    </p>
-    <button class="about-me__cta btn-pill">{{ 'aboutme.btnText' | translate }}</button>
+    <div class="about-me__content">
+      <div class="about-me__title">
+        <span class="about-me__overline overline">{{ 'aboutme.overline' | translate }}</span>
+        <div class="about-me__headline">
+          <h2 class="about-me__headline-text">{{ 'aboutme.headline' | translate }}</h2>
+          <img
+            class="about-me__headline-animation"
+            src="/images/00_Hand-drawn-lines/01_About-me/Color-option-1.png"
+            alt=""
+          />
+        </div>
+      </div>
+
+      <p class="about-me__text">{{ 'aboutme.paragraph1' | translate }}</p>
+      <p class="about-me__text">{{ 'aboutme.paragraph2' | translate }}</p>
+
+      <a class="about-me__cta btn-pill btn-pill--secondary" routerLink="/" fragment="contact">
+        {{ 'aboutme.btnText' | translate }}
+      </a>
+    </div>
   </div>
-  <ul class="about-me__snipets">
-    @for (snipet of snipets; track $index) {
-      <li>
-        <app-snipet
-          [icon]="snipet.icon"
-          [text]="snipet.text"
-          [background]="snipet.backgroundImages"
-        ></app-snipet>
-      </li>
-    }
-  </ul>
 </section>

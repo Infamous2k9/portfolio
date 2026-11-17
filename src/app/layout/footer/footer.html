@@ -1,1 +1,27 @@
-<p>footer works!</p>
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__brand">
+      <a routerLink="/" [attr.aria-label]="'header.home' | translate">
+        <app-brand-logo />
+      </a>
+      <p class="footer__copyright">© André Funk {{ year }}</p>
+    </div>
+
+    <a class="footer__link footer__legal" routerLink="/imprint">{{ 'footer.legalNotice' | translate }}</a>
+
+    <ul class="footer__social">
+      @for (link of socialLinks; track link.name) {
+        <li>
+          <a
+            class="footer__link"
+            [href]="link.url"
+            [attr.target]="link.external ? '_blank' : null"
+            [attr.rel]="link.external ? 'noopener noreferrer' : null"
+          >
+            {{ link.name }}
+          </a>
+        </li>
+      }
+    </ul>
+  </div>
+</footer>

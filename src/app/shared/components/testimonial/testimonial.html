@@ -1,0 +1,21 @@
+<figure class="testimonial">
+  <blockquote class="testimonial__quote">
+    <p>{{ testimonial().textKey | translate }}</p>
+  </blockquote>
+  <figcaption class="testimonial__author">
+    <span>
+      <strong class="testimonial__name">{{ testimonial().name }}</strong>
+      <span class="testimonial__role">{{ testimonial().roleKey | translate }}</span>
+    </span>
+    @if (testimonial().profileUrl) {
+      <a
+        class="testimonial__profile"
+        [href]="testimonial().profileUrl"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {{ 'testimonials.profile' | translate }}
+      </a>
+    }
+  </figcaption>
+</figure>

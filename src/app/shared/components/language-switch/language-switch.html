@@ -1,0 +1,30 @@
+<div class="lang-switch" [class.lang-switch--de]="language.isGerman()">
+  <button
+    type="button"
+    class="lang-switch__label"
+    [class.lang-switch__label--active]="!language.isGerman()"
+    [attr.aria-pressed]="!language.isGerman()"
+    (click)="language.set('en')"
+  >
+    EN
+  </button>
+
+  <button
+    type="button"
+    class="lang-switch__toggle"
+    [attr.aria-label]="'header.toggleLanguage' | translate"
+    (click)="language.toggle()"
+  >
+    <span class="lang-switch__slider"></span>
+  </button>
+
+  <button
+    type="button"
+    class="lang-switch__label"
+    [class.lang-switch__label--active]="language.isGerman()"
+    [attr.aria-pressed]="language.isGerman()"
+    (click)="language.set('de')"
+  >
+    DE
+  </button>
+</div>

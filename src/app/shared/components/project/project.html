@@ -1,12 +1,18 @@
-<div class="project-card">
-    <figure class="project-card__image">
-        <img src="{{ image() }}" alt="{{ title() }} image" />
-    </figure>
-    <div class="project-card__text">
-        <h3>{{ title() }}</h3>
-        <p>{{ description() }}</p>
-    </div>
-    <button class="btn-pill btn-pill--secondary btn-push btn-push--dark">
-        Projects details {{ projectIndex() }}
-    </button>
-</div>
+<!-- The whole card is one link, so there are no nested interactive elements. -->
+<a class="project-card" [routerLink]="['/projects', project().slug]">
+  <figure class="project-card__image">
+    <img [src]="project().image" [alt]="project().name" />
+    @if (featured()) {
+      <span class="project-card__sticker" aria-hidden="true">
+        {{ 'projects.featuredSticker' | translate }}
+      </span>
+    }
+  </figure>
+  <div class="project-card__text">
+    <h3>{{ project().name }}</h3>
+    <p>{{ 'projects.items.' + project().slug + '.description' | translate }}</p>
+  </div>
+  <span class="project-card__btn btn-pill btn-pill--secondary btn-push btn-push--dark">
+    {{ 'projects.detailsBtn' | translate }}
+  </span>
+</a>

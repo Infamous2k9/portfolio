@@ -1,0 +1,169 @@
+@use "../../../../style/abstracts/" as *;
+
+.contact {
+  @include cover-background("/images/01_Background/Design-Size-Relation/06_Contact.png", top);
+  color: $main-base;
+  padding-top: 120px;
+  padding-bottom: 48px;
+
+  &__inner {
+    @include flex($flex-direction: column);
+    gap: 48px;
+
+    @include respond(lg) {
+      flex-direction: row;
+      flex-wrap: nowrap;
+      gap: 96px;
+    }
+  }
+
+  &__intro {
+    @include flex($flex-direction: column);
+    gap: $padding-16;
+
+    @include respond(lg) {
+      flex: 1;
+    }
+  }
+
+  &__headline {
+    margin-bottom: $padding-16;
+  }
+
+  &__arrow {
+    width: 200px;
+    margin-top: 24px;
+    align-self: flex-end;
+
+    @include respond(lg) {
+      width: 280px;
+    }
+  }
+
+  &__form-wrapper {
+    position: relative;
+
+    @include respond(lg) {
+      flex: 1;
+    }
+  }
+
+  &__sticker {
+    @include flex($justify-content: center, $align-items: center);
+    width: 96px;
+    height: 96px;
+    margin-left: auto;
+    margin-bottom: 16px;
+    color: $main-dark;
+    background-image: url("/images/03_Stickers/00_Round/01_Color option 1- Orange.png");
+    background-size: contain;
+    transform: rotate(-10deg);
+
+    @include respond(lg) {
+      width: 120px;
+      height: 120px;
+    }
+
+    app-brand-logo {
+      transform: scale(0.75);
+    }
+  }
+}
+
+.contact-form {
+  @include flex($flex-direction: column, $flex-wrap: nowrap);
+  gap: 24px;
+
+  &__field {
+    @include flex($flex-direction: column, $flex-wrap: nowrap);
+    gap: 8px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid $main-base;
+    transition: border-color 0.2s;
+
+    &:focus-within {
+      border-color: $main-hl1;
+    }
+
+    &--invalid {
+      border-color: $error;
+    }
+  }
+
+  &__label {
+    font-weight: 700;
+  }
+
+  &__input {
+    width: 100%;
+    color: $main-light;
+
+    &::placeholder {
+      color: color-mix(in srgb, #{$main-base} 60%, transparent);
+    }
+
+    // the field border already shows focus
+    &:focus-visible {
+      outline: none;
+    }
+  }
+
+  &__textarea {
+    resize: vertical;
+    min-height: 80px;
+  }
+
+  &__error {
+    color: $error;
+    font-size: 14px;
+  }
+
+  &__honeypot {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+
+  &__checkbox {
+    @include flex($align-items: flex-start, $flex-wrap: nowrap);
+    gap: 12px;
+    font-size: 14px;
+
+    input {
+      flex-shrink: 0;
+      width: 18px;
+      height: 18px;
+      margin-top: 2px;
+      accent-color: $main-hl2;
+    }
+
+    a {
+      color: $main-hl2;
+      text-decoration: underline;
+
+      &:hover {
+        color: $main-hl1;
+      }
+    }
+  }
+
+  &__footer {
+    @include flex($justify-content: space-between, $align-items: center);
+    gap: $padding-16;
+  }
+
+  &__status {
+    font-size: 14px;
+  }
+
+  &__submit {
+    margin-left: auto;
+
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+  }
+}

@@ -1,31 +1,62 @@
 @use "../../../../style/abstracts/" as *;
 
 .projects {
-    padding: 0 $padding-16;
+  padding-block: $section-spacing;
 
-    &__headline {
-        margin-top: 16px;
+  &__intro {
+    @include flex($flex-direction: column);
+    gap: 40px;
+
+    @include respond(lg) {
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-items: flex-start;
+      gap: 64px;
     }
-    &__headline-animation {
-        width: 65%;
-        position: absolute;
-        transform: translateY(10%) translateX(-1%);
-        clip-path: inset(0 100% 0 0);
-        animation: slide-in-out linear 5s infinite;
+  }
+
+  &__intro-text {
+    @include respond(lg) {
+      flex: 0 0 38%;
+      margin-top: 96px;
     }
-    &__headline-text {
+  }
+
+  &__featured {
+    @include respond(lg) {
+      flex: 1;
     }
-    &__list {
-        margin-top: 40px;
-        @include flex($flex-direction: column);
-        gap: 40px;
+  }
+
+  &__headline {
+    position: relative;
+    width: fit-content;
+    margin-top: $padding-16;
+  }
+
+  &__headline-animation {
+    position: absolute;
+    left: -2%;
+    bottom: -40%;
+    width: 110%;
+    clip-path: inset(0 100% 0 0);
+    animation: slide-in-out linear 5s infinite;
+    pointer-events: none;
+  }
+
+  &__description {
+    margin-top: 48px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    margin-top: 64px;
+
+    @include respond(md) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 48px;
     }
-    &__overline {
-    }
-    &__title {
-        margin-bottom: 32px;
-    }
-    &__description {
-        margin-top: 64px;
-    }
+  }
 }

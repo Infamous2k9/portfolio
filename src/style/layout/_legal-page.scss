@@ -1,0 +1,76 @@
+@use "../abstracts" as *;
+
+// Shared layout for the legal notice and the privacy policy page.
+.legal-page {
+  @include flex($flex-direction: column, $flex-wrap: nowrap);
+  min-height: 100vh;
+
+  &__hero {
+    @include cover-background(
+      "/images/01_Background/Img-Original-Size/12 Isolated Paper Rips copia.png",
+      bottom
+    );
+    color: $main-base;
+    padding-bottom: 96px;
+
+    @include respond(lg) {
+      padding-bottom: 140px;
+    }
+  }
+
+  &__title {
+    margin-top: 48px;
+  }
+
+  &__back {
+    @include flex($align-items: center, $flex-wrap: nowrap);
+    gap: 8px;
+    margin-bottom: 24px;
+    width: fit-content;
+    font-weight: 500;
+
+    img {
+      width: 32px;
+      height: 32px;
+    }
+
+    &:hover {
+      color: $main-hl3;
+    }
+  }
+
+  &__content {
+    flex-grow: 1;
+    padding-top: 48px;
+    padding-bottom: $section-spacing;
+
+    // readable line length, aligned to the left edge of the container
+    > * {
+      max-width: 960px;
+    }
+  }
+
+  &__section {
+    margin-bottom: 32px;
+
+    h2 {
+      font-size: 20px;
+      color: $main-hl2;
+      margin-bottom: 8px;
+    }
+
+    p {
+      white-space: pre-line; // allows "\n" line breaks from the translation files
+    }
+
+    a {
+      color: $main-hl2;
+      text-decoration: underline;
+    }
+  }
+
+  &__date {
+    margin-top: 48px;
+    font-size: 14px;
+  }
+}

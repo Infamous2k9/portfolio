@@ -1,18 +1,24 @@
 @use "../../../../style/abstracts/" as *;
+
 .skill {
-    @include flex($flex-direction: column, $justify-content: center, $align-items: center);
-    gap: 4px;
-    &__icon {
-        height: 72px;
-        width: 72px;
-        animation: all 5s ease-in-out;
-        &:hover {
-            transform: scale(0.9);
-            filter: grayscale(1);
-            cursor: pointer;
-        }
+  @include flex($flex-direction: column, $justify-content: center, $align-items: center);
+  gap: 4px;
+
+  &__icon {
+    height: 72px;
+    width: 72px;
+    transition:
+      transform 0.3s ease-in-out,
+      filter 0.3s ease-in-out;
+
+    &:hover {
+      transform: scale(0.9);
+      filter: grayscale(1);
     }
-    &__text {
-        text-align: center;
-    }
+  }
+
+  &__text {
+    text-align: center;
+    font-size: 14px;
+  }
 }

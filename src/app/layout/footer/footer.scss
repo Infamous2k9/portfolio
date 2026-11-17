@@ -1,0 +1,67 @@
+@use "../../../style/abstracts/" as *;
+
+:host {
+  display: block;
+  background-color: $dark-surface;
+  color: $main-base;
+}
+
+:host(.footer--ripped) {
+  @include cover-background("/images/01_Background/Img-Original-Size/Footer.png", top);
+  background-color: transparent;
+  padding-top: 64px;
+}
+
+.footer {
+  padding-block: 32px;
+
+  &__inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "brand"
+      "social"
+      "legal";
+    gap: 16px;
+    align-items: end;
+
+    @include respond(md) {
+      grid-template-columns: 1fr auto;
+      grid-template-areas:
+        "brand brand"
+        "legal social";
+    }
+  }
+
+  &__brand {
+    grid-area: brand;
+  }
+
+  &__copyright {
+    font-weight: 700;
+    margin-top: 8px;
+  }
+
+  &__legal {
+    grid-area: legal;
+  }
+
+  &__social {
+    grid-area: social;
+    @include flex($justify-content: space-between);
+    gap: 24px;
+
+    @include respond(md) {
+      gap: 96px;
+    }
+  }
+
+  &__link {
+    font-weight: 500;
+    transition: color 0.2s;
+
+    &:hover {
+      color: $main-hl3;
+    }
+  }
+}

@@ -1,12 +1,11 @@
-<div class="snipet">
-  <figure class="snipet__figure">
-    <img
-      src="{{ background().mobile }}"
-      alt="{{ background().alt | translate }}"
-      class="snipet__image"
-    />
-    <figcaption [style.background-image]="'url(' + icon() + ')'" class="snipet__text">
-      {{ text() | translate }}
-    </figcaption>
-  </figure>
-</div>
+<figure class="snipet">
+  <!-- The paper is decorative, so it gets an empty alt; the text is in the figcaption. -->
+  <picture>
+    <source media="(min-width: 1024px)" [attr.srcset]="background().desktop" />
+    <img class="snipet__image" [src]="background().mobile" alt="" />
+  </picture>
+  <figcaption class="snipet__text">
+    <img class="snipet__icon" [src]="icon()" alt="" />
+    <span>{{ textKey() | translate }}</span>
+  </figcaption>
+</figure>

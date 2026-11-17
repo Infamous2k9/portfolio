@@ -1,0 +1,81 @@
+<div class="project-detail">
+  <div class="project-detail__top">
+    <div class="container">
+      <app-header />
+    </div>
+  </div>
+
+  <main class="container project-detail__inner">
+    <a class="project-detail__link" routerLink="/" fragment="projects">
+      <img src="/images/00_Hand-drawn-lines/03_Portfolio/Breadcrumbs/Breadcrumb arrow 1.png" alt="" />
+      {{ 'projectDetail.goBack' | translate }}
+    </a>
+
+    @if (project(); as currentProject) {
+      <div class="project-detail__grid">
+        <article class="project-detail__text">
+          <div class="project-detail__headline">
+            <h1 class="page-title">{{ currentProject.name }}</h1>
+            <img
+              class="project-detail__underline"
+              src="/images/00_Hand-drawn-lines/01_About-me/Color-option-1.png"
+              alt=""
+            />
+          </div>
+
+          <h2 class="project-detail__subtitle">{{ 'projectDetail.description' | translate }}</h2>
+          <p>{{ 'projects.items.' + currentProject.slug + '.description' | translate }}</p>
+
+          <h2 class="project-detail__subtitle">{{ 'projectDetail.implementation' | translate }}</h2>
+          <p>{{ 'projects.items.' + currentProject.slug + '.details' | translate }}</p>
+
+          <p class="project-detail__duration">
+            <strong>{{ 'projectDetail.duration' | translate }}:</strong>
+            {{ currentProject.durationWeeks }} {{ 'projectDetail.weeks' | translate }}
+          </p>
+
+          <ul class="project-detail__tech" [attr.aria-label]="'projectDetail.technologies' | translate">
+            @for (skill of technologies(); track skill.name) {
+              <li>
+                <img [src]="skill.icon" alt="" />
+                {{ skill.name }}
+              </li>
+            }
+          </ul>
+        </article>
+
+        <div class="project-detail__media">
+          <figure class="project-detail__image">
+            <img [src]="currentProject.image" [alt]="currentProject.name" />
+            <span class="project-detail__sticker" aria-hidden="true"><app-brand-logo /></span>
+          </figure>
+
+          <div class="project-detail__actions">
+            @if (currentProject.githubUrl) {
+              <a class="btn-pill btn-push" [href]="currentProject.githubUrl" target="_blank" rel="noopener noreferrer">
+                GitHub
+              </a>
+            }
+            @if (currentProject.liveUrl) {
+              <a class="btn-pill btn-push" [href]="currentProject.liveUrl" target="_blank" rel="noopener noreferrer">
+                {{ 'projectDetail.liveTest' | translate }}
+              </a>
+            }
+          </div>
+
+          <a class="project-detail__link project-detail__next" [routerLink]="['/projects', nextProject().slug]">
+            {{ 'projectDetail.nextProject' | translate }}
+            <img
+              src="/images/00_Hand-drawn-lines/03_Portfolio/Breadcrumbs/Next project arrow 1.png"
+              alt=""
+            />
+          </a>
+        </div>
+      </div>
+    } @else {
+      <div class="project-detail__not-found">
+        <h1 class="page-title">{{ 'projectDetail.notFound' | translate }}</h1>
+      </div>
+    }
+  </main>
+</div>

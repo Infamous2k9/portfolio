@@ -1,23 +1,77 @@
 @use "../../../../style/abstracts/" as *;
 
-.project-card {
-    @include flex($flex-direction: column);
-    &__image {
-        //border: 1px solid $main-dark;
-        aspect-ratio: 4/3;
-        margin-bottom: 24px;
-        & > img {
-            border-radius: 20px;
-        }
-    }
-    &__text {
-        margin-bottom: 32px;
-        & > h3 {
-            margin-bottom: $padding-16;
-        }
-    }
+:host {
+  display: block;
 }
 
-.btn-push {
+.project-card {
+  @include flex($flex-direction: column);
+  color: $main-dark;
+
+  &__image {
+    position: relative;
+    aspect-ratio: 4 / 3;
+    margin-bottom: 24px;
+    border-radius: 20px;
+    overflow: visible;
+
+    > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 20px;
+      transition: transform 0.3s ease;
+    }
+  }
+
+  &:hover &__image > img {
+    transform: scale(1.02);
+  }
+
+  &__sticker {
+    @include flex($justify-content: center, $align-items: center);
+    @include text-style(16px, 700, 110%, $font-handwriting);
+    position: absolute;
+    top: -16px;
+    left: -16px;
+    width: 104px;
+    height: 104px;
+    padding: 12px;
+    text-align: center;
+    color: $main-light;
+    background-image: url("/images/03_Stickers/00_Round/00_Color option 1 - Blue.png");
+    background-size: contain;
+    transform: rotate(-12deg);
+
+    @include respond(lg) {
+      width: 128px;
+      height: 128px;
+      font-size: 18px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 32px;
+
+    > h3 {
+      margin-bottom: $padding-16;
+    }
+  }
+
+  // On desktop the whole card is clickable, the button is only needed on touch layouts.
+  &__btn {
     margin-left: auto;
+
+    @include respond(lg) {
+      display: none;
+    }
+  }
+}
+
+:host(.project-card--featured) .project-card__image {
+  aspect-ratio: auto;
+
+  > img {
+    object-fit: contain;
+  }
 }

@@ -1,65 +1,185 @@
 {
-  "header": {},
+  "nav": {
+    "aboutMe": "Über mich",
+    "skills": "Skills",
+    "projects": "Projekte",
+    "contact": "Kontakt"
+  },
+  "header": {
+    "home": "Zur Startseite",
+    "mainNav": "Hauptnavigation",
+    "openMenu": "Menü öffnen",
+    "closeMenu": "Menü schließen",
+    "toggleLanguage": "Sprache zwischen Englisch und Deutsch wechseln"
+  },
   "hero": {
-    "welcomeText": "Hi, ich bin der André",
-    "btnText": "kontaktiere mich"
+    "helloWorld": "Hallo Welt",
+    "welcomeText": "Hi, ich bin André",
+    "btnText": "Kontakt aufnehmen",
+    "profileAlt": "Porträt von André Funk"
   },
   "aboutme": {
     "overline": "Wer ist André?",
-    "underlineImg": {
-      "opt1": {
-        "name": "blaue handgemalte linie",
-        "src": "/images/00_Hand-drawn-lines/01_About-me/Color-option-1.png"
-      },
-      "opt2": {
-        "name": "violett handgemalte linie",
-        "src": "/images/00_Hand-drawn-lines/01_About-me/Color-option-2.png"
-      },
-      "opt3": {
-        "name": "türkis handgemalte linie",
-        "src": "/images/00_Hand-drawn-lines/01_About-me/Color-option-3.png"
-      }
-    },
-    "headline": "Über Mich",
-    "content": "Hey, ich bin André. Schreibe ein paar Informationen über dich, die mit IT zu tun haben. Warum begeisterst du dich für das Programmieren? Was inspiriert dich, deine Programmierfähigkeiten zu verbessern? Lernst du aus jeder Herausforderung, während du nach der effizientesten oder elegantesten Lösung suchst? <br><br> Lass uns zusammenarbeiten und gemeinsam etwas Großartiges erschaffen!",
-    "btnText": "lass uns reden",
+    "headline": "Über mich",
+    "paragraph1": "Hey, ich bin André, Junior Full-Stack-Entwickler aus der Nähe von Köln. Im Frontend bin ich am längsten unterwegs, und das Backend mit dem Django REST Framework macht mir genauso viel Spaß. Mich motiviert es, Probleme aus dem Alltag in einfache, nützliche Webanwendungen zu verwandeln.",
+    "paragraph2": "Ich lerne aus jeder Herausforderung und suche immer nach der sauberen, effizienten Lösung. Lass uns zusammenarbeiten und gemeinsam etwas Großartiges bauen!",
+    "btnText": "Lass uns reden",
     "snipets": {
-      "text": {
-        "location": "Wohnhaft nähe Köln",
-        "relocation": "Offen für Umzug",
-        "remote": "Offen für Homeoffice"
+      "location": "Wohnhaft nahe Köln",
+      "relocation": "Offen für Umzug",
+      "remote": "Offen für Remote-Arbeit"
+    }
+  },
+  "skills": {
+    "overline": "Mein Stack",
+    "headline": "Skill Set",
+    "text": "Ich arbeite mit modernen Frontend-Technologien wie Angular und TypeScript und baue APIs mit Python und Django. Neue Tools lerne ich gerne und passe mich an das an, was ein Projekt braucht.",
+    "interestedIn": "Außerdem möchte ich mich hier einarbeiten:",
+    "pullToPeel": "Zum Abziehen klicken",
+    "peelLabel": "Technologien anzeigen, die ich als Nächstes lernen möchte"
+  },
+  "projects": {
+    "overline": "Mein Handwerk",
+    "headline": "Projekte",
+    "description": "Schau dir meine Projekte an und probiere sie aus. Jedes zeigt, wie ich responsive, benutzerfreundliche Anwendungen mit sauberem und effizientem Code umsetze.",
+    "featuredSticker": "Top-Projekt",
+    "detailsBtn": "Projektdetails",
+    "items": {
+      "join": {
+        "description": "Aufgabenmanager nach dem Kanban-Prinzip. Erstelle und organisiere Aufgaben per Drag-and-drop, weise Personen und Kategorien zu.",
+        "details": "TODO: Beschreibe deine Rolle und den Ablauf im Projekt. Zeig einem Recruiter, wie du selbstständig oder im Team gearbeitet hast und was du gelernt hast."
       },
-      "background": {
-        "opt1": {
-          "mobile": {
-            "yellow": {
-              "name": "gelber schnipsel",
-              "src": "/images/02_Ripped-Paper/Option-1/Mobile/About-me-1.png"
-            },
-            "blue": {
-              "name": "blauer schnipsel",
-              "src": "/images/02_Ripped-Paper/Option-1/Mobile/About-me-2.png"
-            },
-            "orange": {
-              "name": "oranger schnipsel",
-              "src": "/images/02_Ripped-Paper/Option-1/Mobile/About-me-3.png"
-            }
-          },
-          "desktop": {
-            "yellow": {
-              "name": "gelber schnipsel",
-              "src": "/images/02_Ripped-Paper/Option-1/1-Yellow.png"
-            },
-            "blue": {
-              "name": "blauer schnipsel",
-              "src": "images/02_Ripped-Paper/Option-1/2-blue.png"
-            },
-            "orange": {
-              "name": "oranger schnipsel",
-              "src": "images/02_Ripped-Paper/Option-1/3-Orange.png"
-            }
-          }
-        }
+      "valhalla-rush": {
+        "description": "TODO: Kurze Beschreibung von ValhallaRush.",
+        "details": "TODO: Beschreibe deine Rolle und den Ablauf im Projekt."
+      },
+      "pokedex": {
+        "description": "TODO: Kurze Beschreibung des Pokedex.",
+        "details": "TODO: Beschreibe deine Rolle und den Ablauf im Projekt."
+      }
+    }
+  },
+  "testimonials": {
+    "overline": "In ihren Worten:",
+    "headline": "Stimmen von Kollegen",
+    "profile": "Profil",
+    "roles": {
+      "frontendDeveloper": "Frontend-Entwickler",
+      "fullstackDeveloper": "Fullstack-Entwickler"
+    },
+    "items": {
+      "first": "[TODO: Feedback einer Kollegin oder eines Kollegen]",
+      "second": "[TODO: Feedback einer Kollegin oder eines Kollegen]",
+      "third": "[TODO: Feedback einer Kollegin oder eines Kollegen]"
+    }
+  },
+  "contact": {
+    "overline": "Kontakt",
+    "headline": "Bereit für die Zusammenarbeit?",
+    "paragraph1": "Ich suche eine Stelle im Frontend oder Full-Stack, remote oder hybrid. Erzähl mir von deinem Team und deinem Projekt, und wir finden heraus, wie ich mich einbringen kann.",
+    "paragraph2": "Du brauchst einen motivierten Entwickler, der gerne echte Probleme löst? Schreib mir eine Nachricht!",
+    "form": {
+      "name": {
+        "label": "Wie heißt du?",
+        "placeholder": "Dein Name",
+        "error": "Bitte gib deinen Namen ein."
+      },
+      "email": {
+        "label": "Wie lautet deine E-Mail?",
+        "placeholder": "deine@email.de",
+        "error": "Bitte gib eine gültige E-Mail-Adresse ein."
+      },
+      "message": {
+        "label": "Wie kann ich dir helfen?",
+        "placeholder": "Hallo André, ich interessiere mich für…",
+        "error": "Bitte schreib eine Nachricht mit mindestens 10 Zeichen."
+      },
+      "privacy": {
+        "before": "Ich habe die",
+        "link": "Datenschutzerklärung",
+        "after": "gelesen und stimme der beschriebenen Verarbeitung meiner Daten zu.",
+        "error": "Bitte akzeptiere die Datenschutzerklärung."
+      },
+      "send": "Senden",
+      "sending": "Wird gesendet…",
+      "success": "Danke! Deine Nachricht wurde gesendet.",
+      "failure": "Leider ist etwas schiefgelaufen. Versuch es nochmal oder schreib mir eine E-Mail."
+    }
+  },
+  "footer": {
+    "legalNotice": "Impressum"
+  },
+  "projectDetail": {
+    "goBack": "Zurück",
+    "description": "Beschreibung",
+    "implementation": "Umsetzung",
+    "duration": "Dauer",
+    "weeks": "Wochen",
+    "technologies": "Verwendete Technologien",
+    "liveTest": "Live-Test",
+    "nextProject": "Nächstes Projekt",
+    "notFound": "Projekt nicht gefunden"
+  },
+  "legal": {
+    "back": "Zurück"
+  },
+  "imprint": {
+    "title": "Impressum",
+    "date": "Stand: November 2026",
+    "sections": {
+      "provider": {
+        "title": "Angaben gemäß § 5 DDG",
+        "text": "André Funk\n[TODO: Straße und Hausnummer]\n[TODO: PLZ und Ort]\nDeutschland"
+      },
+      "contact": {
+        "title": "Kontakt",
+        "text": "E-Mail: andre.funk@icloud.com"
+      },
+      "liability": {
+        "title": "Haftung für Inhalte",
+        "text": "Die Inhalte dieser Website wurden mit Sorgfalt erstellt. Für Vollständigkeit, Richtigkeit und Aktualität kann ich jedoch keine Gewähr übernehmen."
+      },
+      "links": {
+        "title": "Haftung für Links",
+        "text": "Diese Website enthält Links zu externen Websites. Auf deren Inhalte habe ich keinen Einfluss und übernehme dafür keine Verantwortung. Für die Inhalte verlinkter Seiten ist stets der jeweilige Anbieter verantwortlich."
+      },
+      "copyright": {
+        "title": "Urheberrecht",
+        "text": "Die von mir erstellten Inhalte und der Code dieser Website unterliegen dem deutschen Urheberrecht. Das Design dieses Portfolios basiert auf einer Vorlage der Developer Akademie GmbH."
+      }
+    }
+  },
+  "privacy": {
+    "title": "Datenschutzerklärung",
+    "date": "Stand: November 2026",
+    "sections": {
+      "controller": {
+        "title": "Verantwortlicher",
+        "text": "André Funk\n[TODO: Straße und Hausnummer]\n[TODO: PLZ und Ort]\nE-Mail: andre.funk@icloud.com"
+      },
+      "hosting": {
+        "title": "Hosting und Server-Logfiles",
+        "text": "Diese Website wird bei [TODO: Hosting-Anbieter] gehostet. Beim Aufruf speichert der Server automatisch technische Daten wie IP-Adresse, Browsertyp und Zeitpunkt des Zugriffs. Das ist für die sichere Auslieferung der Website erforderlich (Art. 6 Abs. 1 lit. f DSGVO)."
+      },
+      "contactForm": {
+        "title": "Kontaktformular",
+        "text": "Wenn du mir über das Kontaktformular schreibst, verarbeite ich Name, E-Mail-Adresse und Nachricht ausschließlich zur Beantwortung deiner Anfrage (Art. 6 Abs. 1 lit. b DSGVO). Die Daten werden mir per E-Mail zugestellt und gelöscht, sobald sie nicht mehr benötigt werden."
+      },
+      "localStorage": {
+        "title": "Local Storage",
+        "text": "Deine Sprachauswahl (Englisch/Deutsch) wird im Local Storage deines Browsers gespeichert, damit die Seite sie beim nächsten Besuch kennt. Das ist für die von dir gewünschte Funktion technisch erforderlich (§ 25 Abs. 2 Nr. 2 TDDDG). Tracking- oder Analyse-Tools werden nicht eingesetzt."
+      },
+      "fonts": {
+        "title": "Schriftarten",
+        "text": "Alle Schriftarten werden lokal von diesem Server geladen. Eine Verbindung zu externen Schriftanbietern findet nicht statt."
+      },
+      "rights": {
+        "title": "Deine Rechte",
+        "text": "Du hast das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch (Art. 15–21 DSGVO). Schreib mir dafür einfach eine E-Mail."
+      },
+      "complaint": {
+        "title": "Beschwerderecht",
+        "text": "Du hast das Recht, dich bei einer Datenschutz-Aufsichtsbehörde zu beschweren, zum Beispiel bei der Landesbeauftragten für Datenschutz und Informationsfreiheit Nordrhein-Westfalen (LDI NRW)."
       }
     }
   }

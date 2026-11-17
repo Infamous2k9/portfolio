@@ -1,27 +1,30 @@
-<section class="projects">
-    <div class="projects__title">
-        <span class="projects__overline overline">MY CRAFT</span>
-        <div class="projects__headline">
-            <h2 class="projects__headline-text">Projects</h2>
+<section class="projects" id="projects">
+  <div class="container">
+    <div class="projects__intro">
+      <div class="projects__intro-text">
+        <div class="projects__title">
+          <span class="projects__overline overline">{{ 'projects.overline' | translate }}</span>
+          <div class="projects__headline">
+            <h2 class="projects__headline-text">{{ 'projects.headline' | translate }}</h2>
             <img
-                class="projects__headline-animation"
-                src="/images/00_Hand-drawn-lines/03_Portfolio/Color-option-1.png"
-                alt="handdraw "
+              class="projects__headline-animation"
+              src="/images/00_Hand-drawn-lines/03_Portfolio/Color-option-1.png"
+              alt=""
             />
+          </div>
         </div>
+        <p class="projects__description">{{ 'projects.description' | translate }}</p>
+      </div>
+
+      @if (featuredProject) {
+        <app-project class="projects__featured" [project]="featuredProject" [featured]="true" />
+      }
     </div>
-    <p class="projects__description">
-        Encourage people to take a look and interact with your projects. Highlight your approach to
-        creating responsive, user-friendly projects with efficient code.
-    </p>
+
     <div class="projects__list">
-        @for (item of projects; track $index) {
-            <app-project
-                [title]="item.name"
-                [description]="item.description"
-                [image]="item.image"
-                [projectIndex]="$index"
-            ></app-project>
-        }
+      @for (project of otherProjects; track project.slug) {
+        <app-project [project]="project" />
+      }
     </div>
+  </div>
 </section>

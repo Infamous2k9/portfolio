@@ -26,14 +26,29 @@ $opt3-h1: #2ecc71;
 $opt3-h2: #2aa9b0;
 $opt3-h3: #1f6ed4;
 
-//in Use Color
+// In use
 $main-base: $opt1-base;
-$main-dark: $opt2-dark;
+$main-dark: $opt1-dark;
 
 $main-hl1: $opt1-h1;
 $main-hl2: $opt1-h2;
 $main-hl3: $opt1-h3;
 
+// Page surfaces
+$main-light: #f8f9fa;
+// Matches the bottom of the dark paper textures (contact / footer background)
+$dark-surface: #191919;
+$error: #e5484d;
+
+// =======================
+// TYPOGRAPHY
+// =======================
+$font-primary: "Bricolage Grotesque", Arial, Helvetica, sans-serif;
+$font-handwriting: "Kalam", cursive;
+
+// =======================
+// LAYOUT
+// =======================
 $breakpoints: (
   sm: 375px,
   md: 768px,
@@ -42,5 +57,9 @@ $breakpoints: (
   xxl: 2560px,
 );
 
+// Widescreen rule from the design: content never grows wider than the desktop frame.
+$content-max-width: 1440px;
+
 $padding-72: 72px;
 $padding-16: 16px;
+$section-spacing: 88px;

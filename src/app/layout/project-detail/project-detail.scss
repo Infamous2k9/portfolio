@@ -1,0 +1,150 @@
+@use "../../../style/abstracts/" as *;
+
+.project-detail {
+  min-height: 100vh;
+  background-color: $dark-surface;
+  // Notebook paper covers the left part, the ripped edge reveals the dark page on the right.
+  @include cover-background("/images/01_Background/Design-Size-Relation/Note book paper.png", left top);
+  color: $main-dark;
+
+  // the header text is light, so it sits on a dark band above the paper
+  &__top {
+    background-color: $dark-surface;
+  }
+
+  &__inner {
+    padding-top: 32px;
+    padding-bottom: $section-spacing;
+  }
+
+  &__link {
+    @include flex($align-items: center, $flex-wrap: nowrap);
+    gap: 4px;
+    width: fit-content;
+    font-weight: 500;
+    transition: color 0.2s;
+
+    img {
+      width: 40px;
+      height: 40px;
+    }
+
+    &:hover {
+      color: $main-hl3;
+    }
+  }
+
+  &__grid {
+    @include flex($flex-direction: column);
+    gap: 48px;
+    margin-top: 32px;
+
+    @include respond(lg) {
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-items: flex-start;
+      gap: 96px;
+    }
+  }
+
+  &__text {
+    @include flex($flex-direction: column);
+    gap: 12px;
+
+    @include respond(lg) {
+      flex: 0 0 45%;
+    }
+  }
+
+  &__headline {
+    width: fit-content;
+    margin-bottom: 24px;
+  }
+
+  &__underline {
+    width: 70%;
+  }
+
+  &__subtitle {
+    font-size: 18px;
+    margin-top: 16px;
+  }
+
+  &__duration {
+    margin-top: 16px;
+  }
+
+  &__tech {
+    @include flex($align-items: center);
+    gap: 16px;
+    margin-top: 16px;
+    font-size: 14px;
+
+    li {
+      @include flex($align-items: center, $flex-wrap: nowrap);
+      gap: 6px;
+    }
+
+    img {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &__media {
+    @include flex($flex-direction: column);
+    gap: 24px;
+
+    @include respond(lg) {
+      flex: 1;
+      color: $main-base;
+    }
+  }
+
+  &__image {
+    position: relative;
+
+    > img {
+      width: 100%;
+      border-radius: 20px;
+      box-shadow: 0 12px 32px rgb(0 0 0 / 35%);
+    }
+  }
+
+  &__sticker {
+    @include flex($justify-content: center, $align-items: center);
+    position: absolute;
+    right: -16px;
+    bottom: -16px;
+    width: 96px;
+    height: 96px;
+    color: $main-dark;
+    background-image: url("/images/03_Stickers/00_Round/02_ Color option 3 - Yellow.png");
+    background-size: contain;
+    transform: rotate(10deg);
+
+    app-brand-logo {
+      transform: scale(0.7);
+    }
+  }
+
+  &__actions {
+    @include flex($justify-content: flex-end);
+    gap: $padding-16;
+
+    // light buttons only on the dark right side of the desktop layout
+    .btn-pill {
+      border-color: $main-dark;
+      box-shadow: 3px 6px 1px $main-dark;
+
+      @include respond(lg) {
+        border-color: $main-base;
+        box-shadow: 3px 6px 1px $main-base;
+      }
+    }
+  }
+
+  &__next {
+    margin-left: auto;
+  }
+}

@@ -1,1 +1,23 @@
-<p>testimonials works!</p>
+<section class="testimonials" id="testimonials">
+  <div class="container">
+    <div class="testimonials__title">
+      <span class="testimonials__overline overline">
+        <img
+          class="testimonials__arrow"
+          src="/images/00_Hand-drawn-lines/04_Testimonials/Color option 1.png"
+          alt=""
+        />
+        {{ 'testimonials.overline' | translate }}
+      </span>
+      <h2 class="testimonials__headline">{{ 'testimonials.headline' | translate }}</h2>
+    </div>
+
+    <ul class="testimonials__list">
+      @for (testimonial of testimonials; track $index) {
+        <li class="testimonials__item">
+          <app-testimonial [testimonial]="testimonial" [texture]="$even ? 'a' : 'b'" />
+        </li>
+      }
+    </ul>
+  </div>
+</section>
