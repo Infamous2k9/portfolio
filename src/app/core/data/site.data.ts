@@ -41,16 +41,16 @@ export const ABOUT_SNIPETS: readonly AboutSnipet[] = [
  */
 export const TESTIMONIALS: readonly Testimonial[] = [
   {
-    name: '[Name 1]',
+    name: 'Calvin Kamp',
     roleKey: 'testimonials.roles.frontendDeveloper',
     textKey: 'testimonials.items.first',
-    profileUrl: '',
+    profileUrl: 'https://portfolio.calvin-kamp.de/',
   },
   {
-    name: '[Name 2]',
-    roleKey: 'testimonials.roles.frontendDeveloper',
+    name: 'Jens Baumann',
+    roleKey: 'testimonials.roles.fullstackDeveloper',
     textKey: 'testimonials.items.second',
-    profileUrl: '',
+    profileUrl: 'https://jensbaumann.com/',
   },
   {
     name: '[Name 3]',
