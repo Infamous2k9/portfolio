@@ -5,6 +5,7 @@ import { TranslatePipe } from '@ngx-translate/core';
 import { finalize } from 'rxjs';
 import { ContactService } from '../../../core/services/contact.service';
 import { BrandLogo } from '../brand-logo/brand-logo';
+import { Footer } from '../../../layout/footer/footer';
 
 type SubmitStatus = 'idle' | 'sending' | 'success' | 'error';
 type ContactField = 'name' | 'email' | 'message' | 'privacyAccepted';
@@ -14,7 +15,7 @@ const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 
 @Component({
   selector: 'app-contact-me',
-  imports: [ReactiveFormsModule, RouterLink, TranslatePipe, BrandLogo],
+  imports: [ReactiveFormsModule, RouterLink, TranslatePipe, BrandLogo, Footer],
   templateUrl: './contact-me.html',
   styleUrl: './contact-me.scss',
 })

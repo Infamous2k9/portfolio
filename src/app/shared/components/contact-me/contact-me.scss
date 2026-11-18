@@ -4,7 +4,6 @@
   @include cover-background("/images/01_Background/Design-Size-Relation/06_Contact.png", top);
   color: $main-base;
   padding-top: 120px;
-  padding-bottom: 48px;
 
   &__inner {
     @include flex($flex-direction: column);

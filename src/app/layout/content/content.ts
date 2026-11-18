@@ -9,7 +9,7 @@ import { Footer } from '../footer/footer';
 
 @Component({
   selector: 'app-content',
-  imports: [Hero, AboutMe, Skills, Projects, Testimonials, ContactMe, Footer],
+  imports: [Hero, AboutMe, Skills, Projects, Testimonials, ContactMe],
   templateUrl: './content.html',
   styleUrl: './content.scss',
 })
