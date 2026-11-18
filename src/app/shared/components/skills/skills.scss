@@ -3,7 +3,8 @@
 .skills {
   @include cover-background("/images/01_Background/Design-Size-Relation/03_Skills.png", bottom);
   color: $main-base;
-  padding-block: $section-spacing 160px;
+  padding-block: $section-spacing 375px;
+  margin-inline: -12px;
 
   &__header {
     @include flex($flex-direction: column, $align-items: flex-end);
