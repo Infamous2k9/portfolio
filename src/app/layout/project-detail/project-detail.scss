@@ -2,9 +2,8 @@
 
 .project-detail {
   min-height: 100vh;
-  background-color: $dark-surface;
+  background-color: $main-light;
   // Notebook paper covers the left part, the ripped edge reveals the dark page on the right.
-  @include cover-background("/images/01_Background/Design-Size-Relation/Note book paper.png", left top);
   color: $main-dark;
 
   // the header text is light, so it sits on a dark band above the paper
@@ -43,7 +42,7 @@
       flex-direction: row;
       flex-wrap: nowrap;
       align-items: flex-start;
-      gap: 96px;
+      gap: 150px;
     }
   }
 
@@ -97,7 +96,7 @@
 
     @include respond(lg) {
       flex: 1;
-      color: $main-base;
+      color: $main-dark;
     }
   }
 
@@ -131,17 +130,6 @@
   &__actions {
     @include flex($justify-content: flex-end);
     gap: $padding-16;
-
-    // light buttons only on the dark right side of the desktop layout
-    .btn-pill {
-      border-color: $main-dark;
-      box-shadow: 3px 6px 1px $main-dark;
-
-      @include respond(lg) {
-        border-color: $main-base;
-        box-shadow: 3px 6px 1px $main-base;
-      }
-    }
   }
 
   &__next {
