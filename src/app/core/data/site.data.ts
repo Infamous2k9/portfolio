@@ -44,7 +44,7 @@ export const TESTIMONIALS: readonly Testimonial[] = [
     name: 'Calvin Kamp',
     roleKey: 'testimonials.roles.frontendDeveloper',
     textKey: 'testimonials.items.first',
-    profileUrl: 'https://portfolio.calvin-kamp.de/',
+    profileUrl: 'https://calvin-kamp.de/',
   },
   {
     name: 'Jens Baumann',
