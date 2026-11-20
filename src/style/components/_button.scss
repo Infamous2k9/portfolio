@@ -10,7 +10,7 @@
   padding: clamp(6px, 0.6vw, 10px) clamp(20px, 1.6vw, 28px);
   width: fit-content;
   max-width: 100%;
-  min-width: max-content;
+  min-width: 0;
   overflow: visible;
   transition: background-color 420ms ease;
   background: transparent;

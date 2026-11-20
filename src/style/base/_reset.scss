@@ -26,6 +26,7 @@ html {
 /* Body defaults */
 body {
   min-height: 100vh;
+  overflow-x: clip;
   background-color: $main-light;
   font-family: $font-primary;
   color: $main-dark;

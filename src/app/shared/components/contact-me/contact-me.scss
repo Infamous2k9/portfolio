@@ -30,7 +30,7 @@
   }
 
   &__arrow {
-    width: 200px;
+    width: min(200px, 60%);
     margin-top: 24px;
     align-self: flex-end;
 
@@ -95,6 +95,7 @@
 
   &__input {
     width: 100%;
+    min-width: 0;
     color: $main-light;
 
     &::placeholder {

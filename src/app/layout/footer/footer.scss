@@ -49,7 +49,7 @@
   &__social {
     grid-area: social;
     @include flex($justify-content: space-between);
-    gap: 24px;
+    gap: 16px 24px;
 
     @include respond(md) {
       gap: 96px;

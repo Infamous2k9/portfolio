@@ -94,8 +94,17 @@
     font-display: swap;
 }
 
+
+h1,
+h2,
+.page-title {
+    overflow-wrap: break-word;
+    hyphens: auto;
+}
+
 h1 {
-    @include text-style(50px, 700, 100%);
+    // scales down on phones narrower than ~385px
+    @include text-style(clamp(36px, 13vw, 50px), 700, 100%);
 
     @include respond(md) {
         font-size: 69px;
@@ -108,9 +117,9 @@ h1 {
     }
 }
 
-// Page titles on sub pages (project detail, legal notice) should not use the giant hero size.
+
 .page-title {
-    @include text-style(46px, 700, 100%);
+    @include text-style(clamp(32px, 11vw, 46px), 700, 100%);
 
     @include respond(lg) {
         font-size: 64px;
@@ -118,7 +127,7 @@ h1 {
 }
 
 h2 {
-    @include text-style(46px, 700, 100%);
+    @include text-style(clamp(32px, 11vw, 46px), 700, 100%);
 }
 
 h3 {
@@ -130,7 +139,7 @@ h3 {
 }
 
 p {
-    @include text-style(18px, 400, 130%);
+    @include text-style(16px, 400, 130%);
 }
 
 .overline {
